@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ella Xue — Creative Producer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-follower" aria-hidden="true"></div>
+
+<!-- ============================================================ HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M8 38 C10 20, 24 8, 38 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M14 28 C18 24, 28 22, 34 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="38" cy="12" r="3" stroke="var(--coral)" stroke-width="1.5" fill="none"/>
+      </svg>
+      ella xue
+    </a>
+    <nav class="nav-links">
+      <a href="index.html"    class="nav-link active">Home</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="about.html"   class="nav-link">About Me</a>
+      <a href="contact.html" class="nav-link nav-link--cta">Contact ↗</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="header-rule"></div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav>
+    <a href="index.html"    class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"   class="mobile-nav-link">About Me</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  </nav>
+</div>
+
+<main>
+
+<!-- ============================================================ HERO -->
+<div class="hero-scroll-container" id="heroScroll">
+  <div class="hero-sticky" id="heroSticky">
+
+    <!-- Name: I'M ELLA inline, slides left on scroll so ELLA aligns at 4vw -->
+    <div class="hs-upper">
+      <div class="hs-name-track" id="hsNameTrack">
+        <h1 class="hs-big-name" aria-label="I'm Ella">
+          <span class="hs-im" id="hsIm" aria-hidden="true">I'M </span><span id="hsElla">ELLA</span>
+        </h1>
+      </div>
+    </div>
+
+    <!-- Lower: eyebrow + crossfading descriptions + buttons -->
+    <div class="hs-lower">
+      <span class="hs-eyebrow" id="hsEyebrow">Creative Producer</span>
+      <div class="hs-desc-wrap">
+        <p class="hs-desc hs-desc--a" id="hsDescA">Bringing structure to creative ideas and helping cross-functional teams move from vision to delivery.</p>
+        <p class="hs-desc hs-desc--b" id="hsDescB">A creative producer based in Vancouver, focused on games, interactive media, and the craft of bringing creative teams together.</p>
+      </div>
+      <div class="hs-actions">
+        <a href="projects.html" class="btn btn-primary">See My Work</a>
+        <a href="about.html"   class="btn btn-outline">About Me</a>
+      </div>
+    </div>
+
+    <!-- Photo: contained card, fades in right on scroll -->
+    <div class="hs-photo-wrap" id="hsPhotoWrap">
+      <img src="assets/images/ellaphoyo.JPG" alt="Ella Xue">
+      <span class="hs-photo-tag">hi, that's me :)</span>
+    </div>
+
+<div class="hs-scroll-hint" id="hsScrollHint" aria-hidden="true">
+      <span class="hs-scroll-label">scroll</span>
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================ PM TRAITS -->
+<section class="section section--alt">
+  <div class="container">
+    <span class="eyebrow reveal">What I Bring</span>
+    <h2 class="section-heading reveal">Some of my strengths as a creative producer</h2>
+
+    <div class="tabs-nav reveal" role="tablist">
+      <button class="tab-btn active" data-tab="tab-1" role="tab" aria-selected="true">Organized Operator</button>
+      <button class="tab-btn"        data-tab="tab-2" role="tab" aria-selected="false">Team Connector</button>
+      <button class="tab-btn"        data-tab="tab-3" role="tab" aria-selected="false">Creative Problem Solver</button>
+    </div>
+
+    <div id="tab-1" class="tab-panel active" role="tabpanel">
+      <div class="tab-text reveal">
+        <h3>Structure that keeps teams moving.</h3>
+        <p>I turn ambitious ideas into clear production plans, connecting scope, milestones, priorities, and team capacity so creative teams can stay focused and move forward with confidence.</p>
+      </div>
+      <ul class="trait-list reveal reveal-d1">
+        <li>Sprint planning, retrospectives, and milestone tracking</li>
+        <li>Scope definition and proactive prioritization</li>
+        <li>Risk, dependency, and workload visibility</li>
+        <li>Clear documentation across the production lifecycle</li>
+        <li>Review, playtest, asset, and delivery coordination</li>
+      </ul>
+    </div>
+
+    <div id="tab-2" class="tab-panel" role="tabpanel">
+      <div class="tab-text reveal">
+        <h3>Strong teams are built through trust, clarity, and empathy.</h3>
+        <p>I take a people-centered approach to PM. I pay attention not just to what needs to be delivered, but to how the team is working, where people feel blocked, and what support they need to do their best work.</p>
+      </div>
+      <ul class="trait-list reveal reveal-d1">
+        <li>Building trust and open communication within the team</li>
+        <li>Connecting artists, designers, developers, clients, and stakeholders</li>
+        <li>Recognizing workload concerns and blockers early</li>
+        <li>Facilitating constructive discussions and resolving misalignment</li>
+        <li>Supporting team morale while maintaining accountability</li>
+        <li>Keeping decisions, responsibilities, and progress transparent</li>
+      </ul>
+    </div>
+
+    <div id="tab-3" class="tab-panel" role="tabpanel">
+      <div class="tab-text reveal">
+        <h3>Finding practical paths through creative complexity.</h3>
+        <p>My background in design and digital media helps me understand both the creative intention behind a project and the production realities required to deliver it. I help turn uncertainty into clear, actionable next steps.</p>
+      </div>
+      <ul class="trait-list reveal reveal-d1">
+        <li>Creative problem-solving within production constraints</li>
+        <li>Translating broad ideas into achievable production steps</li>
+        <li>Supporting design, art, technical, and production discussions</li>
+        <li>Synthesizing feedback into focused priorities</li>
+        <li>Visual communication of concepts, workflows, and progress</li>
+        <li>Balancing creative ambition, quality, scope, and feasibility</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ RECENT WORK -->
+<section class="rw-section">
+  <div class="container">
+    <div class="rw-top reveal">
+      <h2 class="rw-heading">Recent Work</h2>
+    </div>
+    <div class="rw-grid">
+      <a href="kaijucorp.html" class="rw-card reveal">
+        <div class="rw-img-wrap rw-img-1">
+          <div class="rw-img-thumb" style="background: url('assets/images/kajiucorp/cover.JPG') center/cover no-repeat;"></div>
+          <span class="wip-badge">Work in Progress</span>
+          <div class="rw-arrow" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 13L13 3M13 3H6M13 3v7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="rw-card-info">
+          <span class="rw-card-meta">Game Production · VGS Studio · In Progress</span>
+          <span class="rw-card-name">Kaiju Corp.</span>
+        </div>
+      </a>
+      <a href="crossworld.html" class="rw-card reveal reveal-d1">
+        <div class="rw-img-wrap rw-img-2">
+          <div class="rw-img-thumb" style="background: url('assets/images/crossworld/background.png') center/cover no-repeat;"></div>
+          <div class="rw-arrow" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 13L13 3M13 3H6M13 3v7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="rw-card-info">
+          <span class="rw-card-meta">Game Production · 2026</span>
+          <span class="rw-card-name">Crossworld Chronicles</span>
+        </div>
+      </a>
+      <a href="biochem101.html" class="rw-card reveal reveal-d2">
+        <div class="rw-img-wrap rw-img-3">
+          <div class="rw-img-thumb" style="background: url('assets/images/biochem-101/coVER.png') center/cover no-repeat;"></div>
+          <div class="rw-arrow" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 13L13 3M13 3H6M13 3v7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="rw-card-info">
+          <span class="rw-card-meta">Game Production · Team Fennec · 2025</span>
+          <span class="rw-card-name">Biochem 101</span>
+        </div>
+      </a>
+    </div>
+    <div class="rw-cta reveal">
+      <a href="projects.html" class="btn btn-outline">View All Projects</a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<div class="proj-end">
+  <div class="proj-end-inner">
+    <span class="proj-end-label">Get in touch</span>
+    <nav class="proj-end-nav">
+      <div class="proj-end-nav-col">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="proj-end-nav-col">
+        <a href="https://www.linkedin.com/in/ella-xue-676157253/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </nav>
+  </div>
+  <div class="proj-end-body">
+    <h2 class="proj-end-heading">Let's start<br>creating together.</h2>
+    <a href="contact.html" class="proj-end-btn">Let's talk ↗</a>
+  </div>
+  <div class="proj-end-foot">
+    <span>© 2026 Ella Xue</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

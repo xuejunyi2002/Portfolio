@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crossworld Chronicles — Ella Xue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .proj-photo-wrap img { height: auto; object-fit: unset; }
+  </style>
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-follower" aria-hidden="true"></div>
+
+<!-- ============================================================ HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M8 38 C10 20, 24 8, 38 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M14 28 C18 24, 28 22, 34 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="38" cy="12" r="3" stroke="var(--coral)" stroke-width="1.5" fill="none"/>
+      </svg>
+      ella xue
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html"     class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="about.html"    class="nav-link">About Me</a>
+      <a href="contact.html"  class="nav-link nav-link--cta">Contact ↗</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="header-rule"></div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav>
+    <a href="index.html"     class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"    class="mobile-nav-link">About Me</a>
+    <a href="contact.html"  class="mobile-nav-link">Contact</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============================================================ COVER -->
+  <div class="proj-cover">
+    <img class="proj-cover-img" src="assets/images/crossworld/background.png" alt="Crossworld Chronicles cover" aria-hidden="true">
+    <h1 class="proj-cover-title">Crossworld<br>Chronicles</h1>
+  </div>
+
+  <!-- ============================================================ HERO META -->
+  <div class="proj-hero-below">
+
+    <div class="proj-breadcrumb reveal">
+      <a href="projects.html" class="back-link">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 3L5 8l5 5"/>
+        </svg>
+        All Projects
+      </a>
+    </div>
+
+    <p class="proj-hero-sub reveal">
+      A cooperative asymmetric VR dungeon crawler built in 12 weeks for Coal Car Studio, within two players, two roles, one shared world.
+    </p>
+
+    <div class="snapshot-row reveal reveal-d2">
+      <div class="snap-cell">
+        <span class="snap-key">Role</span>
+        <span class="snap-val">Project Manager · UI/UX</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Duration</span>
+        <span class="snap-val">Jan – Apr 2026</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Platform</span>
+        <span class="snap-val">Meta Quest 3 · Unity</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Client</span>
+        <span class="snap-val">Coal Car Studio</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Structure</span>
+        <span class="snap-val">6 Agile Sprints</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Tools</span>
+        <span class="snap-val">Unity · Jira · Figma · GitHub</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============================================================ TRAILER -->
+  <div class="proj-trailer-wrap reveal">
+    <div class="proj-trailer">
+      <iframe
+        src="https://www.youtube.com/embed/2unpqOxhGJo?autoplay=1&mute=1"
+        title="Crossworld Chronicles — Project Trailer"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <div class="proj-wrap">
+
+    <!-- ============================================================ ROLE -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Skills Demonstrated</span>
+      <h2 class="section-heading reveal reveal-d1">Role &amp; Responsibilities</h2>
+      <p class="role-intro reveal reveal-d2">
+        As the sole Project Manager, I owned production from discovery through client handoff — bridging design, development, art, and playtesting across an 8-person interdisciplinary team.
+      </p>
+      <div class="role-grid">
+        <div class="role-card reveal reveal-d1">
+          <span class="role-idx">01</span>
+          <p class="role-name">Production Leadership</p>
+          <p class="role-desc">Led sprint planning, retrospectives, and milestone tracking. Maintained visibility across all disciplines throughout delivery.</p>
+        </div>
+        <div class="role-card reveal reveal-d2">
+          <span class="role-idx">02</span>
+          <p class="role-name">Client &amp; Stakeholder Comms</p>
+          <p class="role-desc">Primary bridge to Coal Car Studio. Ran weekly demos and translated technical discussions into actionable production tasks.</p>
+        </div>
+        <div class="role-card reveal reveal-d3">
+          <span class="role-idx">03</span>
+          <p class="role-name">Scope &amp; Risk Management</p>
+          <p class="role-desc">Defined MVP vertical slice scope and dynamically re-prioritized around technical feasibility as multiplayer complexity grew.</p>
+        </div>
+        <div class="role-card reveal reveal-d1">
+          <span class="role-idx">04</span>
+          <p class="role-name">Playtesting &amp; Iteration</p>
+          <p class="role-desc">Planned and ran both test rounds. Synthesized findings into sprint-level iteration priorities across teams.</p>
+        </div>
+        <div class="role-card reveal reveal-d2">
+          <span class="role-idx">05</span>
+          <p class="role-name">Cross-Disciplinary Sync</p>
+          <p class="role-desc">Maintained alignment between gameplay, UI, art, and VR interaction pipelines under shifting technical constraints.</p>
+        </div>
+        <div class="role-card reveal reveal-d3">
+          <span class="role-idx">06</span>
+          <p class="role-name">Documentation &amp; Handoff</p>
+          <p class="role-desc">Oversaw all project docs and delivered the final prototype and materials package to the client at sprint close.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- team with client photo -->
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap" style="aspect-ratio: 16/9;">
+        <img src="assets/images/crossworld/IMG_5715.jpg" alt="Team with Coal Car Studio client" style="object-position: center 65%;">
+      </div>
+      <p class="proj-photo-caption">Team with Coal Car Studio client</p>
+    </div>
+
+    <!-- ============================================================ TIMELINE -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Timeline</span>
+      <h2 class="section-heading reveal reveal-d1">Development Sprints</h2>
+      <div class="sprint-pills reveal reveal-d2">
+        <div class="sprint-pill"><strong>12</strong> Weeks Total</div>
+        <div class="sprint-pill"><strong>6</strong> Agile Sprints</div>
+        <div class="sprint-pill"><strong>2</strong> Development Phases</div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line">
+          <div class="timeline-progress" id="tlProgress"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Sprint 1</span>
+            <p class="tl-sprint-name">Discovery &amp; Alignment</p>
+            <p class="tl-dates">Weeks 1–2</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">Project direction defined</span>
+              <span class="chip">Production workflow set</span>
+              <span class="chip">Technical feasibility scoped</span>
+              <span class="chip">Client comms structure</span>
+            </div>
+            <p class="tl-pm-note">Established team charter and sprint cadence aligned with client meeting rhythm.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Sprint 2</span>
+            <p class="tl-sprint-name">Core Gameplay Proto</p>
+            <p class="tl-dates">Weeks 3–4</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">VR interaction systems tested</span>
+              <span class="chip">Asymmetric gameplay built</span>
+              <span class="chip">Tower defense mechanics</span>
+            </div>
+            <p class="tl-pm-note">Coordinated parallel prototyping across combat and strategy systems.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Sprint 3</span>
+            <p class="tl-sprint-name">Multiplayer Integration</p>
+            <p class="tl-dates">Weeks 5–6</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">Client networking integrated</span>
+              <span class="chip">Sprint priorities restructured</span>
+              <span class="chip">Ownership tracking introduced</span>
+            </div>
+            <p class="tl-pm-note">Unexpected networking complexity required restructuring task ownership and increasing client comms frequency.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Sprint 4</span>
+            <p class="tl-sprint-name">Art &amp; System Integration</p>
+            <p class="tl-dates">Weeks 7–8</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip">UI + environment assets</span>
+              <span class="chip">Enemy systems</span>
+              <span class="chip key">Multiplayer loop stabilized</span>
+            </div>
+            <p class="tl-pm-note">Coordinated implementation handoffs between artists and developers daily.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Sprint 5</span>
+            <p class="tl-sprint-name">External Playtesting</p>
+            <p class="tl-dates">Weeks 9–10</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">External user sessions run</span>
+              <span class="chip">Balance feedback collected</span>
+              <span class="chip">Onboarding redesigned</span>
+            </div>
+            <p class="tl-pm-note">Synthesized testing data into a prioritized iteration list — shipped improvements within the same sprint.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Sprint 6</span>
+            <p class="tl-sprint-name">Delivery &amp; Handoff</p>
+            <p class="tl-dates">Weeks 11–12</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip">Optimization + polish</span>
+              <span class="chip">Final documentation</span>
+              <span class="chip key">Client handoff delivered</span>
+            </div>
+            <p class="tl-pm-note">Prepared playable prototype, presentation, and full documentation package for Coal Car Studio.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- client testing photo -->
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap" style="aspect-ratio: 16/9;">
+        <img src="assets/images/crossworld/IMG_5689.jpg" alt="Client testing session" style="object-fit: cover; height: 100%;">
+      </div>
+      <p class="proj-photo-caption">Client testing session</p>
+    </div>
+
+    <!-- art asset tracking -->
+    <div class="proj-photos reveal" style="border-bottom: none; padding-bottom: 0;">
+      <span class="eyebrow" style="margin-bottom: 1.25rem; display: block;">Art Asset Management</span>
+      <div class="proj-photo-wrap" style="max-width: none;">
+        <img src="assets/images/crossworld/art%20asset%20tracking.png" alt="Art asset tracking spreadsheet">
+      </div>
+      <p class="proj-photo-caption" style="margin-top: 0.75rem;">Art asset tracking — creation, revision, approval, and Unity integration stages</p>
+    </div>
+
+    <!-- ============================================================ CHALLENGES -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Key Challenges</span>
+      <h2 class="section-heading reveal reveal-d1">Problem → Response → Outcome</h2>
+      <p class="challenge-intro reveal reveal-d2">An ambitious VR multiplayer concept, a 13-week timeline, and a lot of ideas. My focus was to define scope, align disciplines, and protect the core experience.</p>
+
+      <div class="ch-cards">
+
+        <div class="ch-card reveal">
+          <div class="ch-card-header">
+            <span class="ch-card-num">01</span>
+            <h3 class="ch-card-title">Scope Control</h3>
+          </div>
+          <div class="ch-card-panels">
+            <div class="ch-panel ch-panel--challenge">
+              <span class="ch-panel-label">Challenge</span>
+              <p class="ch-panel-body">The original concept had more features than a 13-week multiplayer VR production could realistically deliver.</p>
+            </div>
+            <div class="ch-panel ch-panel--response">
+              <span class="ch-panel-label">My Response</span>
+              <p class="ch-panel-body">Defined the MVP around the core loop: VR combat, Strategist turrets, resource management, and win/loss conditions. Cut secondary features to keep production focused.</p>
+            </div>
+            <div class="ch-panel ch-panel--outcome">
+              <span class="ch-panel-label">Outcome</span>
+              <p class="ch-panel-body">Delivered a complete multiplayer loop as a cohesive vertical slice, not an overextended feature set.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ch-card reveal reveal-d1">
+          <div class="ch-card-header">
+            <span class="ch-card-num">02</span>
+            <h3 class="ch-card-title">Production Prioritization</h3>
+          </div>
+          <div class="ch-card-panels">
+            <div class="ch-panel ch-panel--challenge">
+              <span class="ch-panel-label">Challenge</span>
+              <p class="ch-panel-body">As the project evolved, the team needed to decide what to improve, simplify, and stop building.</p>
+            </div>
+            <div class="ch-panel ch-panel--response">
+              <span class="ch-panel-label">My Response</span>
+              <p class="ch-panel-body">Used client feedback and playtest findings to prioritize readability, pacing, onboarding, UI clarity, and technical risk.</p>
+            </div>
+            <div class="ch-panel ch-panel--outcome">
+              <span class="ch-panel-label">Outcome</span>
+              <p class="ch-panel-body">Clearer feedback, better pacing, and stronger onboarding — improvements shipped within the same sprint.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ch-card reveal reveal-d2">
+          <div class="ch-card-header">
+            <span class="ch-card-num">03</span>
+            <h3 class="ch-card-title">Cross-Discipline Alignment</h3>
+          </div>
+          <div class="ch-card-panels">
+            <div class="ch-panel ch-panel--challenge">
+              <span class="ch-panel-label">Challenge</span>
+              <p class="ch-panel-body">VR interaction, UI, level design, and art pipelines were tightly connected, creating many dependencies.</p>
+            </div>
+            <div class="ch-panel ch-panel--response">
+              <span class="ch-panel-label">My Response</span>
+              <p class="ch-panel-body">Shared documentation, task boards, and asset tracking kept progress, blockers, and ownership visible across all disciplines.</p>
+            </div>
+            <div class="ch-panel ch-panel--outcome">
+              <span class="ch-panel-label">Outcome</span>
+              <p class="ch-panel-body">The team stayed aligned on priorities and delivery targets throughout production.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- task ownership spreadsheet -->
+    <div class="proj-photos reveal" style="border-bottom: none; padding-bottom: 0;">
+      <span class="eyebrow" style="margin-bottom: 1.25rem; display: block;">Task Ownership</span>
+      <div class="proj-photo-wrap" style="max-width: none;">
+        <img src="assets/images/crossworld/task%20ownership%20spreadship.png" alt="Task ownership spreadsheet">
+      </div>
+      <p class="proj-photo-caption" style="margin-top: 0.75rem;">Task ownership tracking — responsibilities and progress across all disciplines</p>
+    </div>
+
+    <!-- playtest photos -->
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap" style="aspect-ratio: 4/3;">
+          <img src="assets/images/crossworld/test.jpg" alt="Playtest session">
+        </div>
+        <div class="proj-photo-wrap" style="aspect-ratio: 4/3;">
+          <img src="assets/images/crossworld/test2.jpg" alt="Playtest session">
+        </div>
+      </div>
+      <p class="proj-photo-caption">External playtesting rounds</p>
+    </div>
+
+    <!-- ============================================================ REFLECTION -->
+    <section class="proj-section" style="padding-bottom: 0;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+        <div>
+          <span class="eyebrow reveal">Leadership Reflection</span>
+          <h2 class="section-heading reveal reveal-d1">What I Carry Forward</h2>
+          <div class="reflection-grid" style="grid-template-columns: 1fr; gap: 1.25rem;">
+            <div class="refl-card reveal reveal-d1">
+              <p class="refl-big-num">01</p>
+              <p class="refl-title">Scope as a Strategic Tool</p>
+              <p class="refl-body">Scope management is about protecting the experience, not just cutting features. An MVP-first approach keeps the core loop visible and gives teams a shared foundation for evaluating trade-offs.</p>
+            </div>
+            <div class="refl-card reveal reveal-d2">
+              <p class="refl-big-num">02</p>
+              <p class="refl-title">Prioritization Through Evidence</p>
+              <p class="refl-body">Feedback is useful when it supports clear decisions. I evaluate input through player impact, effort, and risk — focusing on changes that improve the experience without disrupting delivery.</p>
+            </div>
+            <div class="refl-card reveal reveal-d3">
+              <p class="refl-big-num">03</p>
+              <p class="refl-title">Visibility Creates Alignment</p>
+              <p class="refl-body">Cross-discipline work needs shared visibility. Clear ownership, dependencies, and blockers let each team stay autonomous while remaining aligned.</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal" style="position: sticky; top: calc(var(--nav-h) + 2rem);">
+          <div class="proj-photo-wrap" style="max-width: none; border-radius: 12px; overflow: hidden;">
+            <img src="assets/images/crossworld/teambond.jpg" alt="Team 360 review activity" style="width:100%; height:auto; display:block;">
+          </div>
+          <p class="proj-photo-caption" style="margin-top: 0.75rem;">Team 360 review activity</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /proj-wrap -->
+
+</main>
+
+<div class="proj-end">
+  <div class="proj-end-inner">
+    <span class="proj-end-label">Get in touch</span>
+    <nav class="proj-end-nav">
+      <div class="proj-end-nav-col">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="proj-end-nav-col">
+        <a href="https://www.linkedin.com/in/ella-xue-676157253/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </nav>
+  </div>
+  <div class="proj-end-body">
+    <h2 class="proj-end-heading">Let's start<br>creating together.</h2>
+    <a href="contact.html" class="proj-end-btn">Let's talk ↗</a>
+  </div>
+  <div class="proj-end-foot">
+    <span>© 2026 Ella Xue</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

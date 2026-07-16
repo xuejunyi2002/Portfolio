@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knowledge Translation — Ella Xue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .proj-photo-wrap img { height: auto; object-fit: unset; }
+  </style>
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-follower" aria-hidden="true"></div>
+
+<!-- ============================================================ HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M8 38 C10 20, 24 8, 38 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M14 28 C18 24, 28 22, 34 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="38" cy="12" r="3" stroke="var(--coral)" stroke-width="1.5" fill="none"/>
+      </svg>
+      ella xue
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html"     class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="about.html"    class="nav-link">About Me</a>
+      <a href="contact.html"  class="nav-link nav-link--cta">Contact ↗</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="header-rule"></div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav>
+    <a href="index.html"     class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"    class="mobile-nav-link">About Me</a>
+    <a href="contact.html"  class="mobile-nav-link">Contact</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============================================================ COVER -->
+  <div class="proj-cover">
+    <img class="proj-cover-img" src="assets/images/knowledge-translation/web2.png" alt="Knowledge Translation platform" aria-hidden="true">
+    <h1 class="proj-cover-title">Knowledge<br>Translation</h1>
+  </div>
+
+  <!-- ============================================================ HERO META -->
+  <div class="proj-hero-below">
+
+    <div class="proj-breadcrumb reveal">
+      <a href="projects.html" class="back-link">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 3L5 8l5 5"/>
+        </svg>
+        All Projects
+      </a>
+    </div>
+
+    <p class="proj-hero-sub reveal">
+      An AI platform making academic research more accessible, created in collaboration with UBC Library.
+    </p>
+
+    <div class="snapshot-row reveal reveal-d2">
+      <div class="snap-cell">
+        <span class="snap-key">Partner</span>
+        <span class="snap-val">UBC Library</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Status</span>
+        <span class="snap-val">Completed</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">My Role</span>
+        <span class="snap-val">Co Project Manager · UI Sub Team Lead</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Project Type</span>
+        <span class="snap-val">Academic AI Platform Project</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Project Time</span>
+        <span class="snap-val">10 Weeks</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============================================================ PLATFORM WALKTHROUGH -->
+  <div class="proj-trailer-wrap reveal">
+    <div class="proj-trailer">
+      <video autoplay muted loop playsinline>
+        <source src="assets/images/knowledge-translation/knowledge%20video.avif" type="video/avif">
+      </video>
+    </div>
+  </div>
+
+  <div class="proj-wrap">
+
+    <!-- ============================================================ INTRO -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">About the Project</span>
+      <h2 class="section-heading reveal reveal-d1">Project Introduction</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">Knowledge Translation is an AI powered web platform created in collaboration with UBC Library to make academic research easier to understand and access.</p>
+        <p>The platform transforms complex research into accessible formats, including text summaries, podcasts, infographics, and conversational interaction. As Co Project Manager and UI Sub Team Lead, I supported the overall production process while leading the design workflow for the user facing platform.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ ROLE -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Skills Demonstrated</span>
+      <h2 class="section-heading reveal reveal-d1">Role &amp; Responsibilities</h2>
+      <p class="role-intro reveal reveal-d2">
+        Co PM and UI Sub Team Lead. I kept the team organized and aligned while leading the UI design workflow from wireframes to delivery.
+      </p>
+      <div class="role-grid">
+        <div class="role-card reveal reveal-d1">
+          <span class="role-idx">01</span>
+          <p class="role-name">Production and Project Coordination</p>
+          <p class="role-desc">Scrum-based planning in Notion across sub teams. Tracked priorities, ownership, blockers, and dependencies. Translated the project vision into focused weekly goals and kept visibility high across workstreams.</p>
+        </div>
+        <div class="role-card reveal reveal-d2">
+          <span class="role-idx">02</span>
+          <p class="role-name">UI Sub Team Leadership</p>
+          <p class="role-desc">Led the UI sub team from wireframes to high-fidelity prototypes. Built and maintained a shared design system. Connected interface decisions to accessibility, user clarity, and development handoffs.</p>
+        </div>
+        <div class="role-card reveal reveal-d3">
+          <span class="role-idx">03</span>
+          <p class="role-name">Stakeholder and Cross Functional Alignment</p>
+          <p class="role-desc">Coordinated communication between the team, instructors, and UBC Library. Documented decisions, ownership, and next actions across all workstreams. Translated stakeholder goals into clear production priorities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- web platform photo -->
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/knowledge-translation/web.png" alt="Knowledge Translation web platform interface">
+      </div>
+      <p class="proj-photo-caption">Knowledge Translation web platform interface</p>
+    </div>
+
+    <!-- ============================================================ PRODUCTION JOURNEY -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Timeline</span>
+      <h2 class="section-heading reveal reveal-d1">Production Journey</h2>
+      <div class="sprint-pills reveal reveal-d2">
+        <div class="sprint-pill"><strong>10</strong> Weeks Total</div>
+        <div class="sprint-pill"><strong>5</strong> Production Stages</div>
+        <div class="sprint-pill"><strong>Cross</strong> Functional Team</div>
+      </div>
+
+      <!-- project timeline image -->
+      <div class="reveal reveal-d3" style="margin: 2.5rem 0;">
+        <div class="proj-photo-wrap" style="max-width: none;">
+          <img src="assets/images/knowledge-translation/timeline.png" alt="Knowledge Translation project timeline">
+        </div>
+        <p class="proj-photo-caption" style="text-align: center; margin-top: 0.85rem;">Knowledge Translation project timeline</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line">
+          <div class="timeline-progress" id="tlProgress"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Stage 01</span>
+            <p class="tl-sprint-name">Define the Accessibility Goal</p>
+            <p class="tl-dates">Project kickoff</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">Problem statement defined</span>
+              <span class="chip">Sub teams formed</span>
+              <span class="chip">Project direction set</span>
+              <span class="chip">Early priorities scoped</span>
+            </div>
+            <p class="tl-pm-note">Aligned the team around a clear problem statement, defined the project direction, and organized the early work into focused priorities and sub teams.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Stage 02</span>
+            <p class="tl-sprint-name">Structure the Cross Functional Workflow</p>
+            <p class="tl-dates">Production setup</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">Scrum workflow in Notion built</span>
+              <span class="chip">Ownership clarified</span>
+              <span class="chip">Cross team dependencies mapped</span>
+            </div>
+            <p class="tl-pm-note">Co created the project plan, organized Scrum based tracking in Notion, clarified ownership, and made cross team dependencies visible so workstreams could move independently while staying connected.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Stage 03</span>
+            <p class="tl-sprint-name">Build the Platform Experience</p>
+            <p class="tl-dates">Design and development</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">UI workflow led</span>
+              <span class="chip">Design system built</span>
+              <span class="chip">Wireframes to prototypes</span>
+              <span class="chip">Dev handoffs coordinated</span>
+            </div>
+            <p class="tl-pm-note">Led the UI workflow from wireframes to prototypes, maintained the design system, and coordinated design-to-development handoffs.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Stage 04</span>
+            <p class="tl-sprint-name">Review and Iterate</p>
+            <p class="tl-dates">Feedback and refinement</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">Stakeholder feedback organized</span>
+              <span class="chip">Priorities updated</span>
+              <span class="chip">Navigation improved</span>
+              <span class="chip">Accessibility addressed</span>
+            </div>
+            <p class="tl-pm-note">Organized feedback into themes, clarified priorities, and updated the production plan without disrupting dependent work.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Stage 05</span>
+            <p class="tl-sprint-name">Align the Final Platform</p>
+            <p class="tl-dates">Integration and delivery</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip">Cross team dependencies resolved</span>
+              <span class="chip key">All four formats delivered</span>
+              <span class="chip">Platform experience unified</span>
+            </div>
+            <p class="tl-pm-note">Coordinated final cross-team dependencies and kept visibility over completion priorities as interface, AI, and content systems came together.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- final platform photos -->
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/knowledge-translation/web2.png" alt="Knowledge Translation final platform interface">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/knowledge-translation/web%20mascot.png" alt="Knowledge Translation mascot chat interface">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Final platform: interface and mascot chat feature</p>
+    </div>
+
+    <!-- ============================================================ CHALLENGES -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Key Challenges</span>
+      <h2 class="section-heading reveal reveal-d1">Problem → Response → Outcome</h2>
+      <p class="challenge-intro reveal reveal-d2">A large cross-functional student team, an AI platform, and a 10-week timeline. My focus was cross-workstream visibility, connected delivery, and turning broad stakeholder goals into clear production priorities.</p>
+
+      <div class="ch-cards">
+
+        <div class="ch-card reveal">
+          <div class="ch-card-header">
+            <span class="ch-card-num">01</span>
+            <h3 class="ch-card-title">Coordinating a Large Cross-Functional Team</h3>
+          </div>
+          <div class="ch-card-panels">
+            <div class="ch-panel ch-panel--challenge">
+              <span class="ch-panel-label">Challenge</span>
+              <p class="ch-panel-body">Multiple workstreams — UI, development, AI, research, content, and stakeholder communication — each moving at a different pace, with real risks around unclear ownership, hidden dependencies, and disconnected progress.</p>
+            </div>
+            <div class="ch-panel ch-panel--response">
+              <span class="ch-panel-label">My Response</span>
+              <p class="ch-panel-body">Co-managed through a shared Scrum workflow in Notion with visible ownership, priorities, and milestones. Regular meetings and written updates surfaced blockers and clarified cross-team dependencies.</p>
+            </div>
+            <div class="ch-panel ch-panel--outcome">
+              <span class="ch-panel-label">Outcome</span>
+              <p class="ch-panel-body">Sub teams gained a clearer view of progress and could move independently while staying aligned to the delivery timeline.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ch-card reveal reveal-d1">
+          <div class="ch-card-header">
+            <span class="ch-card-num">02</span>
+            <h3 class="ch-card-title">Connecting Sub Team Progress to Overall Delivery</h3>
+          </div>
+          <div class="ch-card-panels">
+            <div class="ch-panel ch-panel--challenge">
+              <span class="ch-panel-label">Challenge</span>
+              <p class="ch-panel-body">Supporting detailed UI production while keeping the design workstream connected to development, AI integration, content readiness, and the broader schedule. Sub team progress didn't always mean a feature was implementation-ready.</p>
+            </div>
+            <div class="ch-panel ch-panel--response">
+              <span class="ch-panel-label">My Response</span>
+              <p class="ch-panel-body">Connected UI tasks to shared milestones and tracked dependencies beyond the design team. Coordinated handoffs, clarified implementation requirements, and adjusted priorities when dependent systems weren't ready.</p>
+            </div>
+            <div class="ch-panel ch-panel--outcome">
+              <span class="ch-panel-label">Outcome</span>
+              <p class="ch-panel-body">The UI team stayed productive without producing work isolated from implementation. Handoffs became clearer and the final interface aligned with what the full team could deliver.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ch-card reveal reveal-d2">
+          <div class="ch-card-header">
+            <span class="ch-card-num">03</span>
+            <h3 class="ch-card-title">Turning Broad Feedback into Clear Priorities</h3>
+          </div>
+          <div class="ch-card-panels">
+            <div class="ch-panel ch-panel--challenge">
+              <span class="ch-panel-label">Challenge</span>
+              <p class="ch-panel-body">Feedback covered accessibility, navigation, content, and feasibility — more than the team could act on within a 10-week timeline.</p>
+            </div>
+            <div class="ch-panel ch-panel--response">
+              <span class="ch-panel-label">My Response</span>
+              <p class="ch-panel-body">Organized feedback into themes and evaluated each by user value, urgency, effort, and project alignment. Important changes became tasks; lower-priority ideas stayed documented.</p>
+            </div>
+            <div class="ch-panel ch-panel--outcome">
+              <span class="ch-panel-label">Outcome</span>
+              <p class="ch-panel-body">The team responded to meaningful feedback while protecting the timeline. Iteration stayed focused and connected to shared priorities.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ REFLECTION -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Leadership Principles</span>
+      <h2 class="section-heading reveal reveal-d1">What I Carry Forward</h2>
+      <div class="reflection-grid">
+        <div class="refl-card reveal reveal-d1">
+          <p class="refl-big-num">01</p>
+          <p class="refl-title">Visibility Connects Independent Teams</p>
+          <p class="refl-body">Cross-functional teams need autonomy to move, but also a shared view of priorities and dependencies. Transparent production keeps teams independent without losing alignment.</p>
+        </div>
+        <div class="refl-card reveal reveal-d2">
+          <p class="refl-big-num">02</p>
+          <p class="refl-title">Local Progress Must Support Shared Delivery</p>
+          <p class="refl-body">Sub team progress only creates value when it connects to the wider plan. Linking tasks, handoffs, and review points to shared milestones keeps work implementable and aligned.</p>
+        </div>
+        <div class="refl-card reveal reveal-d3">
+          <p class="refl-big-num">03</p>
+          <p class="refl-title">Feedback Needs a Decision Framework</p>
+          <p class="refl-body">Stakeholder feedback needs evaluation before it becomes work. Assessing by user value, effort, and project goals turns broad input into focused production decisions.</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /proj-wrap -->
+
+</main>
+
+<div class="proj-end">
+  <div class="proj-end-inner">
+    <span class="proj-end-label">Get in touch</span>
+    <nav class="proj-end-nav">
+      <div class="proj-end-nav-col">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="proj-end-nav-col">
+        <a href="https://www.linkedin.com/in/ella-xue-676157253/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </nav>
+  </div>
+  <div class="proj-end-body">
+    <h2 class="proj-end-heading">Let's start<br>creating together.</h2>
+    <a href="contact.html" class="proj-end-btn">Let's talk ↗</a>
+  </div>
+  <div class="proj-end-foot">
+    <span>© 2026 Ella Xue</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

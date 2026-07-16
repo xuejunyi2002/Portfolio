@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nunavut Tales — Ella Xue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Show full images without cropping on this page */
+    .proj-photo-wrap img { height: auto; object-fit: unset; }
+  </style>
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-follower" aria-hidden="true"></div>
+
+<!-- ============================================================ HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M8 38 C10 20, 24 8, 38 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M14 28 C18 24, 28 22, 34 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="38" cy="12" r="3" stroke="var(--coral)" stroke-width="1.5" fill="none"/>
+      </svg>
+      ella xue
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html"     class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="about.html"    class="nav-link">About Me</a>
+      <a href="contact.html"  class="nav-link nav-link--cta">Contact ↗</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="header-rule"></div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav>
+    <a href="index.html"     class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"    class="mobile-nav-link">About Me</a>
+    <a href="contact.html"  class="mobile-nav-link">Contact</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============================================================ COVER -->
+  <div class="proj-cover">
+    <img class="proj-cover-img" src="assets/images/nunavuttale/showcase.avif" alt="Nunavut Tales VR environment" aria-hidden="true">
+    <h1 class="proj-cover-title">Nunavut<br>Tales</h1>
+  </div>
+
+  <!-- ============================================================ HERO META -->
+  <div class="proj-hero-below">
+
+    <div class="proj-breadcrumb reveal">
+      <a href="projects.html" class="back-link">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 3L5 8l5 5"/>
+        </svg>
+        All Projects
+      </a>
+    </div>
+
+    <p class="proj-hero-sub reveal">
+      A VR game prototype connecting environmental storytelling with physical interaction. Personal project, 2023 to 2024.
+    </p>
+
+    <div class="snapshot-row reveal reveal-d2">
+      <div class="snap-cell">
+        <span class="snap-key">Status</span>
+        <span class="snap-val">Completed Prototype</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">My Role</span>
+        <span class="snap-val">Game Designer and Interaction Designer</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Project Type</span>
+        <span class="snap-val">Personal VR Game Prototype</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Project Time</span>
+        <span class="snap-val">2023 to 2024</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Focus</span>
+        <span class="snap-val">Game Design and Physical Computing</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="proj-wrap">
+
+    <!-- ============================================================ INTRODUCTION -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">About the Project</span>
+      <h2 class="section-heading reveal reveal-d1">Project Introduction</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">Nunavut Tales is a personal VR game prototype exploring how environmental storytelling and physical interaction can help players engage with the effects of permafrost thawing in northern communities.</p>
+        <p>The project combines a Unity based first person journey with a custom sensing boot that uses magnetic resistance to simulate the difficulty of moving across unstable ground. I designed the narrative, environments, UI, interaction concept, and physical prototype as one connected player experience.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ 1. PROJECT OVERVIEW -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Overview</span>
+      <h2 class="section-heading reveal reveal-d1">Project Overview</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">Nunavut Tales began as an exploration of how an interactive experience could communicate an environmental issue through both narrative and embodied play.</p>
+        <p>The prototype places the player in a journey inspired by thawing permafrost. Rather than explaining the issue through text, the player moves through changing environments while physically experiencing resistance through a custom sensing boot.</p>
+      </div>
+      <div class="sprint-pills reveal reveal-d3">
+        <div class="sprint-pill">First person Unity environment</div>
+        <div class="sprint-pill">Narrative journey across multiple locations</div>
+        <div class="sprint-pill">Environmental storytelling</div>
+        <div class="sprint-pill">Custom UI and save screens</div>
+        <div class="sprint-pill">Arduino connected physical interaction</div>
+        <div class="sprint-pill">Magnetic resistance system</div>
+        <div class="sprint-pill">Installation style final showcase</div>
+      </div>
+    </section>
+
+    <!-- ============================================================ 2. RESEARCH BEFORE DESIGN -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Research</span>
+      <h2 class="section-heading reveal reveal-d1">Research Before Design</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The project was inspired by a CBC documentary about the effects of climate change and thawing permafrost on northern communities.</p>
+        <p style="margin-bottom: 1.2rem;">Before developing the experience, I visited the Inuit Gallery of Vancouver to better understand the relationship between Inuit art, land, and nature. I also spoke with Inuit artist Koomuatuk Curley from Kinngait, Nunavut, about changes affecting daily life, food practices, travel, hunting, sea ice, and safety.</p>
+        <p>The conversation helped me move beyond a general climate theme and think more carefully about how environmental change affects daily routines, movement, and a person's relationship with the land.</p>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/nunavuttale/nunavut%20data.avif" alt="Inuit Nunangat research data and statistics">
+      </div>
+      <p class="proj-photo-caption">Research Data and Context</p>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/nunavuttale/board.avif" alt="Hand-drawn storyboard showing Inuit life and environmental change">
+      </div>
+      <p class="proj-photo-caption">Inuit Life and Setting</p>
+    </div>
+
+    <!-- ============================================================ 3. FROM VILLAGE TO SAFE PLACE -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Narrative Design</span>
+      <h2 class="section-heading reveal reveal-d1">From Village to "Safe Place"</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The player begins in a northern village affected by unstable ground and travels south after hearing about a place believed to be safe.</p>
+        <p style="margin-bottom: 1.5rem;">The journey moves through five stages:</p>
+      </div>
+
+      <div class="sprint-pills reveal reveal-d3" style="margin-bottom: 2rem;">
+        <div class="sprint-pill"><strong>01</strong>&nbsp; Beginning</div>
+        <div class="sprint-pill"><strong>02</strong>&nbsp; Village</div>
+        <div class="sprint-pill"><strong>03</strong>&nbsp; Snowy Forest</div>
+        <div class="sprint-pill"><strong>04</strong>&nbsp; Highway</div>
+        <div class="sprint-pill"><strong>05</strong>&nbsp; Final Safe Place</div>
+      </div>
+
+      <div class="role-intro reveal reveal-d4">
+        <p>The final destination is a city — safer for the player, but also connected to the environmental systems driving climate change. The journey works as both a physical progression and a metaphor for displacement and environmental responsibility.</p>
+      </div>
+    </section>
+
+    <!-- Narrative images: game map and storyboards -->
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/gamemap.avif" alt="Nunavut Tales player journey stages and plot flow">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/gameroad.avif" alt="Nunavut Tales game road and travel route">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Player Journey &amp; Plot Flow · Game Road and Travel Route</p>
+    </div>
+
+    <!-- ============================================================ 4. BUILDING THE JOURNEY IN UNITY -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Environment Design</span>
+      <h2 class="section-heading reveal reveal-d1">Building the Journey in Unity</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">I built the prototype environment in Unity around a sequence of snowy landscapes, village spaces, unstable terrain, camps, and travel routes.</p>
+        <p style="margin-bottom: 1.2rem;">Each location supported a stage of the journey and communicated isolation, changing terrain, and increasing movement difficulty.</p>
+      </div>
+      <ul class="trait-list reveal reveal-d3">
+        <li>Scene composition and environmental progression</li>
+        <li>Landmark placement and player navigation</li>
+        <li>Visual atmosphere and storytelling through space</li>
+      </ul>
+    </section>
+
+    <!-- Unity environment screenshots -->
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/scene1.avif" alt="Unity environment: opening scene">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/scene2.avif" alt="Unity environment: village area">
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/scene3.avif" alt="Unity environment: snowy forest">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/scene4.avif" alt="Unity environment: highway route">
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/nunavuttale/scene7.avif" alt="Unity environment: final destination">
+      </div>
+      <p class="proj-photo-caption">Unity Environment Study</p>
+    </div>
+
+    <!-- ============================================================ 5. SUPPORTING THE PLAYER JOURNEY -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">UI Design</span>
+      <h2 class="section-heading reveal reveal-d1">Supporting the Player Journey</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">I designed the UI to support the narrative experience without competing with the environment.</p>
+        <p style="margin-bottom: 1.2rem;">The interface included: start screen, loading screen, save selection, main gameplay HUD, and navigation and status information.</p>
+        <p>The visual direction used transparent layers, cool tones, and environmental imagery to maintain continuity between the menus and the game world.</p>
+      </div>
+    </section>
+
+    <!-- UI screenshots -->
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/ui1.avif" alt="Start screen">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/ui2.avif" alt="Save selection screen">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Start Screen and Save Selection</p>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/ui3.avif" alt="Loading screen">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/ui4.avif" alt="Gameplay interface">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Loading Experience and Gameplay Interface</p>
+    </div>
+
+    <!-- ============================================================ 6. DESIGNING THE SENSING BOOT -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Physical Computing</span>
+      <h2 class="section-heading reveal reveal-d1">Designing the Sensing Boot</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The boot uses magnetic components and an Arduino system. An iron plate beneath the player creates resistance at selected moments in the game.</p>
+        <p>The goal was not to recreate the physical condition literally — it was to add a bodily sensation that reinforced what was happening in the digital environment.</p>
+      </div>
+
+      <div class="role-grid" style="margin-top: 2.5rem;">
+        <div class="role-card reveal reveal-d1">
+          <p class="role-name">Interaction Goal</p>
+          <p class="role-desc">Create a physical change in movement that corresponds with environmental events in the game.</p>
+        </div>
+        <div class="role-card reveal reveal-d2">
+          <p class="role-name">Technical Approach</p>
+          <p class="role-desc">Use an Arduino controlled magnetic system to activate resistance beneath the boot.</p>
+        </div>
+        <div class="role-card reveal reveal-d3">
+          <p class="role-name">Player Experience</p>
+          <p class="role-desc">Connect visual instability in the Unity environment with a noticeable change in physical movement.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boot construction process images -->
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/process1.avif" alt="Boot prototype construction process">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/process2.avif" alt="Arduino and magnetic system setup">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Prototype Construction</p>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/nunavuttale/process%203.avif" alt="Completed sensing boot prototype">
+      </div>
+      <p class="proj-photo-caption">Sensing Boot Prototype</p>
+    </div>
+
+    <!-- ============================================================ 7. ONE EXPERIENCE ACROSS TWO SYSTEMS -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Interaction Design</span>
+      <h2 class="section-heading reveal reveal-d1">One Experience Across Two Systems</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The main challenge was making the digital environment and the physical boot feel like one experience. The game provides visual and narrative context; the boot adds resistance at key moments.</p>
+      </div>
+
+      <div class="timeline" style="margin-top: 2.5rem;">
+        <div class="timeline-line">
+          <div class="timeline-progress" id="tlProgress"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 01</span>
+            <p class="tl-sprint-name">The player enters an unstable area in Unity.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 02</span>
+            <p class="tl-sprint-name">The game triggers the Arduino system.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 03</span>
+            <p class="tl-sprint-name">Magnetic resistance increases beneath the boot.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 04</span>
+            <p class="tl-sprint-name">The player feels greater difficulty moving.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 05</span>
+            <p class="tl-sprint-name">The physical response reinforces the environmental event.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Boot interaction video -->
+
+    <div class="proj-trailer-wrap reveal">
+      <div class="proj-trailer">
+        <video controls>
+          <source src="assets/images/nunavuttale/How%20boot%20works.mov" type="video/mp4">
+          <source src="assets/images/nunavuttale/How%20boot%20works.mov" type="video/quicktime">
+        </video>
+      </div>
+    </div>
+
+    <!-- ============================================================ 8. PROTOTYPE SHOWCASE -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Final Presentation</span>
+      <h2 class="section-heading reveal reveal-d1">Prototype Showcase</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The final prototype combined the projected Unity environment with the wearable boot. Players could move through the game world and experience the physical resistance system as one interaction.</p>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/nunavuttale/showcase.avif" alt="Nunavut Tales installation showcase">
+      </div>
+      <p class="proj-photo-caption">Installation Showcase</p>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/showcase2.avif" alt="Player wearing the sensing boot during the installation">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/nunavuttale/showcase3.avif" alt="Projected Unity environment during the final presentation">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Wearable Interaction and Projected Environment</p>
+    </div>
+
+    <!-- ============================================================ 9. WHAT THIS PROJECT TAUGHT ME -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Game Design Reflection</span>
+      <h2 class="section-heading reveal reveal-d1">What This Project Taught Me</h2>
+      <div class="reflection-grid">
+        <div class="refl-card reveal reveal-d1">
+          <p class="refl-big-num">01</p>
+          <p class="refl-title">Interaction Can Carry Meaning</p>
+          <p class="refl-body">A game mechanic can communicate more than a written explanation. Connecting movement resistance to the environment helped me understand how physical interaction can support narrative and emotional context.</p>
+        </div>
+        <div class="refl-card reveal reveal-d2">
+          <p class="refl-big-num">02</p>
+          <p class="refl-title">Worlds Need a Clear Point of View</p>
+          <p class="refl-body">Environment design, story progression, UI, and interaction all need to support the same central idea. This project taught me to evaluate each design choice through the player experience rather than treating every element separately.</p>
+        </div>
+        <div class="refl-card reveal reveal-d3">
+          <p class="refl-big-num">03</p>
+          <p class="refl-title">Research Changes Creative Decisions</p>
+          <p class="refl-body">The early research and conversation with an Inuit artist changed how I thought about the project. It reminded me that culturally connected work requires listening, context, and careful limits on what a prototype can claim to represent.</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /proj-wrap -->
+
+</main>
+
+<div class="proj-end">
+  <div class="proj-end-inner">
+    <span class="proj-end-label">Get in touch</span>
+    <nav class="proj-end-nav">
+      <div class="proj-end-nav-col">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="proj-end-nav-col">
+        <a href="https://www.linkedin.com/in/ella-xue-676157253/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </nav>
+  </div>
+  <div class="proj-end-body">
+    <h2 class="proj-end-heading">Let's start<br>creating together.</h2>
+    <a href="contact.html" class="proj-end-btn">Let's talk ↗</a>
+  </div>
+  <div class="proj-end-foot">
+    <span>© 2026 Ella Xue</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

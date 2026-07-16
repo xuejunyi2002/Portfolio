@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Touching Memories — Ella Xue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Show full images without cropping on this page */
+    .proj-photo-wrap img { height: auto; object-fit: unset; }
+  </style>
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-follower" aria-hidden="true"></div>
+
+<!-- ============================================================ HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M8 38 C10 20, 24 8, 38 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M14 28 C18 24, 28 22, 34 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="38" cy="12" r="3" stroke="var(--coral)" stroke-width="1.5" fill="none"/>
+      </svg>
+      ella xue
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html"     class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="about.html"    class="nav-link">About Me</a>
+      <a href="contact.html"  class="nav-link nav-link--cta">Contact ↗</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="header-rule"></div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav>
+    <a href="index.html"     class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"    class="mobile-nav-link">About Me</a>
+    <a href="contact.html"  class="mobile-nav-link">Contact</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============================================================ COVER -->
+  <div class="proj-cover">
+    <img class="proj-cover-img" src="assets/images/touching-memories/MEMO.png" alt="Touching Memories project cover" aria-hidden="true">
+    <h1 class="proj-cover-title">Touching<br>Memories</h1>
+  </div>
+
+  <!-- ============================================================ HERO META -->
+  <div class="proj-hero-below">
+
+    <div class="proj-breadcrumb reveal">
+      <a href="projects.html" class="back-link">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 3L5 8l5 5"/>
+        </svg>
+        All Projects
+      </a>
+    </div>
+
+    <p class="proj-hero-sub reveal">
+      An interactive installation exploring collective childhood memories. Personal project, 2024.
+    </p>
+
+    <div class="snapshot-row reveal reveal-d2">
+      <div class="snap-cell">
+        <span class="snap-key">Status</span>
+        <span class="snap-val">Completed Installation</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">My Role</span>
+        <span class="snap-val">Interaction Designer and Creative Technologist</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Project Type</span>
+        <span class="snap-val">Personal Interactive Digital Art Project</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Project Time</span>
+        <span class="snap-val">2024</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Focus</span>
+        <span class="snap-val">Spatial Interaction and Collective Memory</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============================================================ FINAL INSTALLATION VIDEO -->
+  <div style="max-width: var(--max-w); margin: 0 auto; padding: 4rem max(5vw, 2.5rem) 1rem;">
+    <span class="eyebrow reveal">Final Installation</span>
+    <h2 class="section-heading reveal reveal-d1">Touching Memories in Motion</h2>
+  </div>
+  <div class="proj-trailer-wrap reveal">
+    <div class="proj-trailer">
+      <iframe
+        src="https://www.youtube.com/embed/5Nyx7KArjew?autoplay=1&mute=1"
+        title="Touching Memories — Final Installation"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <div class="proj-wrap">
+
+    <!-- ============================================================ PROJECT INTRODUCTION -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">About the Project</span>
+      <h2 class="section-heading reveal reveal-d1">Project Introduction</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">Touching Memories is an interactive digital art installation exploring the idea that people from similar cultural and social backgrounds often share recognizable childhood memories.</p>
+        <p style="margin-bottom: 1.2rem;">Visitors interact with nostalgic physical objects connected to distance sensors. Their gestures influence a projected particle system, which gradually transforms into images and animated 3D scenes based on shared memories of childhood bedrooms, classrooms, and neighborhood supermarkets.</p>
+        <p>I designed the concept, research process, visitor flow, 3D environments, TouchDesigner visuals, sensor interaction, and gallery experience as one connected installation.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ 1. PROJECT OVERVIEW -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Overview</span>
+      <h2 class="section-heading reveal reveal-d1">Project Overview</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">Touching Memories began with a question: why do people who grew up in similar cultural environments often remember the same objects, spaces, and routines?</p>
+        <p>The installation turns these shared memories into an interactive experience. Visitors approach familiar childhood objects, and their gestures gradually reveal visual memories through projected particles and 3D animation.</p>
+      </div>
+      <div class="sprint-pills reveal reveal-d3">
+        <div class="sprint-pill">Interactive gallery installation</div>
+        <div class="sprint-pill">Distance sensor based interaction</div>
+        <div class="sprint-pill">TouchDesigner particle system</div>
+        <div class="sprint-pill">Three 3D memory environments</div>
+        <div class="sprint-pill">Physical nostalgic objects</div>
+        <div class="sprint-pill">Projected visuals</div>
+        <div class="sprint-pill">Vintage television animation</div>
+        <div class="sprint-pill">Visitor driven transformation</div>
+      </div>
+    </section>
+
+    <!-- ============================================================ 2. FROM PERSONAL MEMORY TO SHARED MEMORY -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Research</span>
+      <h2 class="section-heading reveal reveal-d1">From Personal Memory to Shared Memory</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The project was inspired by the idea that everyday childhood objects can hold both personal and collective meaning.</p>
+        <p style="margin-bottom: 1.2rem;">I created an anonymous questionnaire using familiar objects from my own generation and cultural background. Participants described the memories, spaces, and emotions they associated with each object.</p>
+        <p>Many responses repeated similar details, including room layouts, school furniture, neighborhood stores, toys, books, household objects, and daily routines. These patterns became the foundation for the installation's three memory scenes.</p>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/touching-memories/childhood%20memo%20examples.avif" alt="Childhood memory research examples">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/touching-memories/childhood%20memo%202.avif" alt="Childhood memory references">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Childhood Memory References</p>
+    </div>
+
+    <!-- ============================================================ 3. DESIGNING THE VISITOR JOURNEY -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Visitor Experience</span>
+      <h2 class="section-heading reveal reveal-d1">Designing the Visitor Journey</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The installation was designed as a guided gallery experience rather than a single screen interaction.</p>
+        <p style="margin-bottom: 1.5rem;">Each memory station includes:</p>
+      </div>
+      <div class="sprint-pills reveal reveal-d3" style="margin-bottom: 2rem;">
+        <div class="sprint-pill"><strong>01</strong>&nbsp; A nostalgic physical object</div>
+        <div class="sprint-pill"><strong>02</strong>&nbsp; A distance sensor</div>
+        <div class="sprint-pill"><strong>03</strong>&nbsp; A projected particle field</div>
+        <div class="sprint-pill"><strong>04</strong>&nbsp; A recognizable memory image</div>
+        <div class="sprint-pill"><strong>05</strong>&nbsp; A corresponding 3D animation on a vintage television</div>
+      </div>
+      <div class="role-intro reveal reveal-d4">
+        <p>As visitors approach an object, the sensor detects their movement and the particle system changes its flow. Continued interaction gradually reveals a memory image; once recognizable, the corresponding animated scene activates.</p>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/touching-memories/gallery%20sketch%20map%201.avif" alt="Gallery visitor flow sketch">
+      </div>
+      <p class="proj-photo-caption">Gallery Experience and Visitor Flow</p>
+    </div>
+
+    <!-- ============================================================ 4. HOW THE SYSTEM WORKS -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Interaction System</span>
+      <h2 class="section-heading reveal reveal-d1">How the System Works</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p>The sensor, particle system, and 3D environments work together as one continuous interaction loop.</p>
+      </div>
+
+      <div class="timeline" style="margin-top: 2.5rem;">
+        <div class="timeline-line">
+          <div class="timeline-progress" id="tlProgress"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 01</span>
+            <p class="tl-sprint-name">The visitor approaches a nostalgic object.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 02</span>
+            <p class="tl-sprint-name">The distance sensor measures the visitor's gesture.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 03</span>
+            <p class="tl-sprint-name">Sensor data is sent to TouchDesigner.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 04</span>
+            <p class="tl-sprint-name">The particle field changes its flow and density.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 05</span>
+            <p class="tl-sprint-name">The particles gradually form a recognizable image.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 06</span>
+            <p class="tl-sprint-name">The completed image triggers a corresponding scene animation.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/touching-memories/how%20it%20works.avif" alt="Touching Memories interaction system">
+      </div>
+      <p class="proj-photo-caption">Interaction System Diagram</p>
+    </div>
+
+    <!-- ============================================================ 5. THREE MEMORY WORLDS -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">3D Environments</span>
+      <h2 class="section-heading reveal reveal-d1">Three Memory Worlds</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p>Each scene was built around recurring details gathered from the questionnaire. The three environments represent the spaces that appeared most frequently across participant responses.</p>
+      </div>
+
+      <!-- Memory 01 -->
+      <div style="margin-top: 3.5rem;">
+        <span class="eyebrow reveal" style="margin-bottom: 0.5rem; display: block;">Memory 01</span>
+        <h3 class="section-heading reveal reveal-d1" style="font-size: clamp(1.3rem, 2.5vw, 1.8rem); margin-bottom: 1.5rem;">Neighborhood Supermarket</h3>
+        <div class="role-intro reveal reveal-d2" style="max-width: 600px; margin-bottom: 0;">
+          <p style="margin-bottom: 1.2rem;">The supermarket scene was inspired by neighborhood stores that appeared frequently in responses — connected to familiar signs, daily routines, coin-operated rides, and family life. I translated these shared details into a modeled environment and particle interaction.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/touching-memories/supermarket%20model.avif" alt="Supermarket 3D modeling process">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/touching-memories/supermodel2.avif" alt="Supermarket environment development">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Supermarket Environment Model and Modeling Development</p>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/touching-memories/supermarket%20particle.avif" alt="Supermarket particle interaction">
+      </div>
+      <p class="proj-photo-caption">Particle Interaction Test</p>
+    </div>
+
+    <!-- Memory 02 -->
+    <section class="proj-section">
+      <span class="eyebrow reveal" style="margin-bottom: 0.5rem; display: block;">Memory 02</span>
+      <h3 class="section-heading reveal reveal-d1" style="font-size: clamp(1.3rem, 2.5vw, 1.8rem); margin-bottom: 1.5rem;">Classroom</h3>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The classroom scene focused on details that appeared repeatedly in shared school memories, including wooden desks, chalkboards, metal lecterns, and the atmosphere of older classrooms.</p>
+        <p>The environment was designed to feel familiar without recreating one specific school.</p>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/touching-memories/classroom%20model%20process.avif" alt="Classroom modeling process">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/touching-memories/classroom%20td%20screenshot.avif" alt="Classroom TouchDesigner setup">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Classroom Modeling Process and TouchDesigner Test</p>
+    </div>
+
+    <!-- Memory 03 -->
+    <section class="proj-section">
+      <span class="eyebrow reveal" style="margin-bottom: 0.5rem; display: block;">Memory 03</span>
+      <h3 class="section-heading reveal reveal-d1" style="font-size: clamp(1.3rem, 2.5vw, 1.8rem); margin-bottom: 1.5rem;">Childhood Bedroom</h3>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The bedroom scene was based on recurring memories of childhood homes and living spaces.</p>
+        <p>Common details included warm wooden furniture, desks, bookshelves, corner cabinets, water bottles, electric fans, alarm clocks, and favorite toys. I used these repeated details to create a scene that felt personally familiar while still reflecting a shared visual memory.</p>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/touching-memories/room%20model%20process.avif" alt="Childhood bedroom modeling process">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/touching-memories/room%20model%20process%202.avif" alt="Bedroom scene development">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Bedroom Scene Development and Modeling Process</p>
+    </div>
+
+    <!-- ============================================================ 6. BUILDING THE PARTICLE INTERACTION -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Visual Design</span>
+      <h2 class="section-heading reveal reveal-d1">Building the Particle Interaction</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The projected particle system acts as the visual bridge between an abstract memory and a recognizable image.</p>
+        <p style="margin-bottom: 1.2rem;">At the start, the particles appear scattered and unstable. As the visitor moves closer, sensor data changes their movement in real time until they gradually form a recognizable image.</p>
+      </div>
+
+      <div class="role-grid" style="margin-top: 2.5rem;">
+        <div class="role-card reveal reveal-d1">
+          <p class="role-name">Gradual Transformation</p>
+          <p class="role-desc">The particles move from scattered and unstable to organized and recognizable, giving the visitor a sense of gradual discovery.</p>
+        </div>
+        <div class="role-card reveal reveal-d2">
+          <p class="role-name">Visitor Response</p>
+          <p class="role-desc">Particle behavior changes directly in response to the visitor's movement, making proximity and gesture the primary interaction.</p>
+        </div>
+        <div class="role-card reveal reveal-d3">
+          <p class="role-name">Image to Animation</p>
+          <p class="role-desc">Once the particle image becomes fully recognizable, it connects to the corresponding 3D animated scene on the vintage television.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ 7. CONNECTING PHYSICAL OBJECTS AND DIGITAL MEMORY -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Sensor Interaction</span>
+      <h2 class="section-heading reveal reveal-d1">Connecting Physical Objects and Digital Memory</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The distance sensor turns the visitor's movement into live visual input.</p>
+        <p>As the visitor approaches the memory object, TouchDesigner receives changing distance values and uses them to control the flow, density, and organization of the projected particles.</p>
+      </div>
+
+      <div class="timeline" style="margin-top: 2.5rem;">
+        <div class="timeline-line">
+          <div class="timeline-progress" id="tlProgress2"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 01</span>
+            <p class="tl-sprint-name">The visitor approaches a memory object.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 02</span>
+            <p class="tl-sprint-name">The sensor measures distance.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 03</span>
+            <p class="tl-sprint-name">TouchDesigner receives the sensor data.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 04</span>
+            <p class="tl-sprint-name">Particle behavior changes in real time.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 05</span>
+            <p class="tl-sprint-name">A memory image gradually appears.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Step 06</span>
+            <p class="tl-sprint-name">The final image connects to the animated 3D scene.</p>
+          </div>
+          <div class="tl-right"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="proj-trailer-wrap reveal">
+      <div class="proj-trailer">
+        <video autoplay muted loop playsinline aria-label="TouchDesigner distance sensor test">
+          <source src="assets/images/touching-memories/td%20sensor%20video.mov" type="video/mp4">
+          <source src="assets/images/touching-memories/td%20sensor%20video.mov" type="video/quicktime">
+          <p>Your browser does not support this video.</p>
+        </video>
+      </div>
+    </div>
+    <div style="max-width: 860px; margin: 0.85rem auto 0; padding: 0 2.5rem;">
+      <p class="proj-photo-caption">Distance Sensor and TouchDesigner Test</p>
+    </div>
+
+    <!-- ============================================================ 8. PREPARING THE INSTALLATION -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Installation Setup</span>
+      <h2 class="section-heading reveal reveal-d1">Preparing the Installation</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The installation required the nostalgic objects, sensors, projected particles, television animations, and visitor flow to work together in one physical space.</p>
+        <p>I tested the placement of each memory station, sensor range, projected image scale, and the relationship between the main projection and the vintage television.</p>
+      </div>
+
+      <div class="role-grid" style="margin-top: 2.5rem;">
+        <div class="role-card reveal reveal-d1">
+          <p class="role-name">Sensor Reliability</p>
+          <p class="role-desc">Testing sensor range and response consistency across different visitor distances and movement speeds.</p>
+        </div>
+        <div class="role-card reveal reveal-d2">
+          <p class="role-name">Projection Alignment</p>
+          <p class="role-desc">Calibrating projected image scale and position relative to each memory station and the gallery walls.</p>
+        </div>
+        <div class="role-card reveal reveal-d3">
+          <p class="role-name">Visitor Flow</p>
+          <p class="role-desc">Arranging object placement and station spacing to guide visitors through each memory in a natural sequence.</p>
+        </div>
+      </div>
+
+      <ul class="trait-list reveal reveal-d4" style="margin-top: 2rem;">
+        <li>Scene transition timing and particle response calibration</li>
+        <li>Visibility and legibility of the television animation</li>
+        <li>Object placement and spatial composition within the gallery</li>
+      </ul>
+    </section>
+
+    <!-- ============================================================ 9. INSTALLATION SHOWCASE -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Final Presentation</span>
+      <h2 class="section-heading reveal reveal-d1">Installation Showcase</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The final experience invited visitors to discover shared memories through movement.</p>
+        <p style="margin-bottom: 1.2rem;">A nostalgic object introduced each memory. The projected particles responded to the visitor, and the completed transformation revealed a corresponding animated scene on the television.</p>
+        <p>Research, spatial design, 3D modeling, real-time visuals, and physical interaction came together in one continuous experience.</p>
+      </div>
+    </section>
+
+    <div class="proj-trailer-wrap reveal">
+      <div class="proj-trailer">
+        <video autoplay muted loop playsinline aria-label="Final television installation view">
+          <source src="assets/images/touching-memories/gallery%20tv%20view.mov" type="video/mp4">
+          <source src="assets/images/touching-memories/gallery%20tv%20view.mov" type="video/quicktime">
+          <p>Your browser does not support this video.</p>
+        </video>
+      </div>
+    </div>
+    <div style="max-width: 860px; margin: 0.85rem auto 0; padding: 0 2.5rem;">
+      <p class="proj-photo-caption">Final Gallery Television Experience</p>
+    </div>
+
+    <!-- ============================================================ 10. WHAT THIS PROJECT TAUGHT ME -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Creative Technology Reflection</span>
+      <h2 class="section-heading reveal reveal-d1">What This Project Taught Me</h2>
+      <div class="reflection-grid">
+        <div class="refl-card reveal reveal-d1">
+          <p class="refl-big-num">01</p>
+          <p class="refl-title">Interaction Can Reveal Emotion</p>
+          <p class="refl-body">The visitor does not receive the memory immediately. The gradual particle transformation creates anticipation and makes recognition feel earned through interaction.</p>
+        </div>
+        <div class="refl-card reveal reveal-d2">
+          <p class="refl-big-num">02</p>
+          <p class="refl-title">Familiar Objects Can Build Shared Worlds</p>
+          <p class="refl-body">Small everyday objects can carry strong cultural and emotional meaning. This project taught me how personal references can become part of a wider interactive experience when patterns are identified through research.</p>
+        </div>
+        <div class="refl-card reveal reveal-d3">
+          <p class="refl-big-num">03</p>
+          <p class="refl-title">Technology Should Support the Idea</p>
+          <p class="refl-body">The sensor, particles, 3D scenes, projection, and television were not separate technical experiments. Each element needed to support the central experience of uncovering a memory.</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /proj-wrap -->
+
+</main>
+
+<div class="proj-end">
+  <div class="proj-end-inner">
+    <span class="proj-end-label">Get in touch</span>
+    <nav class="proj-end-nav">
+      <div class="proj-end-nav-col">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="proj-end-nav-col">
+        <a href="https://www.linkedin.com/in/ella-xue-676157253/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </nav>
+  </div>
+  <div class="proj-end-body">
+    <h2 class="proj-end-heading">Let's start<br>creating together.</h2>
+    <a href="contact.html" class="proj-end-btn">Let's talk ↗</a>
+  </div>
+  <div class="proj-end-foot">
+    <span>© 2026 Ella Xue</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

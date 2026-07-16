@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Ella Xue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-follower" aria-hidden="true"></div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M8 38 C10 20,24 8,38 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M14 28 C18 24,28 22,34 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="38" cy="12" r="3" stroke="var(--coral)" stroke-width="1.5" fill="none"/>
+      </svg>
+      ella xue
+    </a>
+    <nav class="nav-links">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="about.html"   class="nav-link">About Me</a>
+      <a href="contact.html" class="nav-link active nav-link--cta">Contact ↗</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="header-rule"></div>
+</header>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav>
+    <a href="index.html"    class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"   class="mobile-nav-link">About Me</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  </nav>
+</div>
+
+<main class="page-top">
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="page-hero-eyebrow reveal">Say Hello</span>
+    <h1 class="page-hero-title reveal">Let's <em>Connect</em></h1>
+    <p class="page-hero-sub reveal">Whether it's a project, a collaboration, or just a conversation, I'd love to hear from you.</p>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <div>
+        <p class="contact-lead reveal">Have something in mind? Send me a message or reach out directly.</p>
+        <p class="contact-email-link reveal">xuejunyi2002@gmail.com</p>
+        <div class="contact-socials reveal">
+          <a href="https://www.linkedin.com/in/ella-xue-676157253/" target="_blank" rel="noopener" class="underline-link"><span>LinkedIn</span><span class="link-arrow">↗</span></a>
+        </div>
+        <!-- Decorative doodle -->
+        <svg style="margin-top:3rem; width:120px; opacity:0.35;" viewBox="0 0 120 80" fill="none" aria-hidden="true">
+          <path d="M10 60 C30 20,60 10,100 30" stroke="var(--coral)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+          <circle cx="100" cy="30" r="5" stroke="var(--coral)" stroke-width="1.2" fill="none"/>
+          <path d="M20 70 C40 55,70 50,100 65" stroke="var(--blue)" stroke-width="1" stroke-linecap="round" fill="none" stroke-dasharray="3 4"/>
+          <circle cx="30" cy="40" r="3" fill="var(--yellow)" opacity="0.6"/>
+          <circle cx="80" cy="20" r="2.5" fill="var(--blue)" opacity="0.5"/>
+        </svg>
+      </div>
+
+      <form id="contactForm" class="contact-form reveal">
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" required autocomplete="name"/>
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="your@email.com" required autocomplete="email"/>
+        </div>
+        <div class="field">
+          <label for="cf-subject">Subject</label>
+          <input type="text" id="cf-subject" name="subject" placeholder="Project inquiry, collab, say hi…"/>
+        </div>
+        <div class="field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" placeholder="Tell me more…" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          <span>Send Message</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="proj-end">
+  <div class="proj-end-inner">
+    <span class="proj-end-label">Get in touch</span>
+    <nav class="proj-end-nav">
+      <div class="proj-end-nav-col">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="proj-end-nav-col">
+        <a href="https://www.linkedin.com/in/ella-xue-676157253/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </nav>
+  </div>
+  <div class="proj-end-body">
+    <h2 class="proj-end-heading">Let's start<br>creating together.</h2>
+    <a href="contact.html" class="proj-end-btn">Let's talk ↗</a>
+  </div>
+  <div class="proj-end-foot">
+    <span>© 2026 Ella Xue</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Ella Xue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-follower" aria-hidden="true"></div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M8 38 C10 20,24 8,38 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M14 28 C18 24,28 22,34 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="38" cy="12" r="3" stroke="var(--coral)" stroke-width="1.5" fill="none"/>
+      </svg>
+      ella xue
+    </a>
+    <nav class="nav-links">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="about.html"   class="nav-link">About Me</a>
+      <a href="contact.html" class="nav-link nav-link--cta">Contact ↗</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="header-rule"></div>
+</header>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav>
+    <a href="index.html"    class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"   class="mobile-nav-link">About Me</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  </nav>
+</div>
+
+<main class="page-top">
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="page-hero-eyebrow reveal">My Work</span>
+    <h1 class="page-hero-title reveal"><em>Projects</em></h1>
+
+  </div>
+</div>
+
+<!-- ============================================================ PROJECTS + FILTER -->
+<section class="section">
+  <div class="container">
+
+    <!-- Filter bar -->
+    <div class="filter-bar reveal" role="group" aria-label="Filter projects by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="team-project">Team Projects</button>
+      <button class="filter-btn" data-filter="personal-project">Personal Projects</button>
+    </div>
+
+    <!-- Projects grid -->
+    <div class="projects-grid" id="projectsGrid">
+
+      <!-- 01 Kaiju Corp. -->
+      <a href="kaijucorp.html" class="project-card reveal" data-category="team-project">
+        <div class="proj-thumb proj-thumb--0" style="background: url('assets/images/kajiucorp/cover.JPG') center/cover no-repeat;">
+          <span class="proj-thumb-label">VR · PC · Unity · Meta Quest 3</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-cat">Team Project</span>
+            <span class="proj-year">In Progress</span>
+          </div>
+          <h2 class="proj-title">Kaiju Corp.</h2>
+          <p class="proj-desc">An asymmetric VR + PC multiplayer game exploring gaze and gesture interaction, self-directed by VGS Studio. Currently in active production with a target delivery of August 2026.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Project Manager</span>
+            <span class="proj-tag">Producer</span>
+            <span class="proj-tag">VR + PC</span>
+            <span class="proj-tag">Unity</span>
+            <span class="proj-tag wip-tag">Work in Progress</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 02 Crossworld Chronicles -->
+      <a href="crossworld.html" class="project-card reveal reveal-d1" data-category="team-project">
+        <div class="proj-thumb proj-thumb--1" style="background: url('assets/images/crossworld/background.png') center/cover no-repeat;">
+          <span class="proj-thumb-label">VR · Unity · Meta Quest 3</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-cat">Team Project</span>
+            <span class="proj-year">2026</span>
+          </div>
+          <h2 class="proj-title">Crossworld Chronicles</h2>
+          <p class="proj-desc">Cooperative asymmetric VR dungeon crawler built in 12 weeks for Coal Car Studio. Led a team of 8 through 6 agile sprints, two playtesting rounds, and a live client handoff.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Project Manager</span>
+            <span class="proj-tag">Agile</span>
+            <span class="proj-tag">VR</span>
+            <span class="proj-tag">Unity</span>
+            <span class="proj-tag">Client Delivery</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 03 Biochem 101 -->
+      <a href="biochem101.html" class="project-card reveal" data-category="team-project">
+        <div class="proj-thumb proj-thumb--2" style="background: url('assets/images/biochem-101/coVER.png') center/cover no-repeat;">
+          <span class="proj-thumb-label">Co-op · PC · Student Project</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-cat">Team Project</span>
+            <span class="proj-year">2025</span>
+          </div>
+          <h2 class="proj-title">Biochem 101</h2>
+          <p class="proj-desc">A two player cooperative action game built around chemistry and teamwork. Led production across a six person multidisciplinary student team over four months as the sole Project Manager.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Project Manager</span>
+            <span class="proj-tag">Cooperative</span>
+            <span class="proj-tag">PC</span>
+            <span class="proj-tag">Student Project</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 04 Knowledge Translation -->
+      <a href="knowledge-translation.html" class="project-card reveal reveal-d1" data-category="team-project">
+        <div class="proj-thumb proj-thumb--3" style="background: url('assets/images/knowledge-translation/web2.png') center/cover no-repeat;">
+          <span class="proj-thumb-label">UX · PM · AI Platform</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-cat">Team Project</span>
+            <span class="proj-year">2025</span>
+          </div>
+          <h2 class="proj-title">Knowledge Translation</h2>
+          <p class="proj-desc">An AI platform that transforms dense academic research into structured summaries, infographics, podcasts, and voice chat — built for UBC Library in 10 weeks as Co-PM and UI/UX Sub-team Lead.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Co-Project Manager</span>
+            <span class="proj-tag">UI/UX Lead</span>
+            <span class="proj-tag">AI Platform</span>
+            <span class="proj-tag">UBC Library</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 05 Nunavut Tales -->
+      <a href="nunavuttales.html" class="project-card reveal" data-category="personal-project">
+        <div class="proj-thumb proj-thumb--4" style="background: url('assets/images/nunavuttale/showcase.avif') center/cover no-repeat;">
+          <span class="proj-thumb-label">VR · Unity · Physical Computing</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-cat">Personal Project</span>
+            <span class="proj-year">2024</span>
+          </div>
+          <h2 class="proj-title">Nunavut Tales</h2>
+          <p class="proj-desc">A VR game prototype connecting environmental storytelling with physical interaction. A personal exploration of game design, narrative, Unity prototyping, and physical computing.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Game Designer</span>
+            <span class="proj-tag">Unity</span>
+            <span class="proj-tag">Physical Computing</span>
+            <span class="proj-tag">Interaction Design</span>
+            <span class="proj-tag">Personal Project</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 06 Touching Memories -->
+      <a href="touching-memories.html" class="project-card reveal reveal-d1" data-category="personal-project">
+        <div class="proj-thumb proj-thumb--5" style="background: url('assets/images/touching-memories/MEMO.png') center/cover no-repeat;">
+          <span class="proj-thumb-label">Interactive Art · TouchDesigner · Sensor</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-cat">Personal Project</span>
+            <span class="proj-year">2024</span>
+          </div>
+          <h2 class="proj-title">Touching Memories</h2>
+          <p class="proj-desc">An interactive installation exploring collective childhood memories through distance sensors, TouchDesigner particle systems, and three 3D memory environments.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Interaction Designer</span>
+            <span class="proj-tag">Creative Technologist</span>
+            <span class="proj-tag">TouchDesigner</span>
+            <span class="proj-tag">3D Artist</span>
+            <span class="proj-tag">Personal Project</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 07 Paw Paths -->
+      <a href="pawpaths.html" class="project-card reveal" data-category="personal-project">
+        <div class="proj-thumb proj-thumb--0" style="background: url('assets/images/pawpaths/cover%20paw.png') center/cover no-repeat;">
+          <span class="proj-thumb-label" style="color: rgba(60,40,20,0.7);">2D · Puzzle · Game Design</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-cat">Personal Project</span>
+            <span class="proj-year">2024</span>
+          </div>
+          <h2 class="proj-title">Paw Paths</h2>
+          <p class="proj-desc">A gentle puzzle adventure about a puppy collecting fragments of everyday memories. A personal exploration of 2D game design, character animation, and narrative through environment.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Game Designer</span>
+            <span class="proj-tag">Visual Designer</span>
+            <span class="proj-tag">2D Game</span>
+            <span class="proj-tag">Character Design</span>
+            <span class="proj-tag">Personal Project</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 08 Disorder -->
+      <a href="disorder.html" class="project-card reveal reveal-d1" data-category="team-project">
+        <div class="proj-thumb proj-thumb--5" style="background: url('assets/images/disorder/cover.png') center/cover no-repeat;">
+          <span class="proj-thumb-label">Cinematography · Film Production</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-cat">Team Project</span>
+            <span class="proj-year">2023</span>
+          </div>
+          <h2 class="proj-title">Disorder</h2>
+          <p class="proj-desc">A short film exploring body image, anxiety, and self worth. Cinematography, project coordination, and sound design across a team based short film production.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Cinematographer</span>
+            <span class="proj-tag">Project Coordinator</span>
+            <span class="proj-tag">Sound Designer</span>
+            <span class="proj-tag">Short Film</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Empty state -->
+    <div id="noResults" style="display:none; text-align:center; padding: 4rem 0;">
+      <p style="font-family:var(--font-serif); font-size:1.3rem; font-style:italic; color:var(--ink-faint);">No projects in this category yet.</p>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<div class="proj-end">
+  <div class="proj-end-inner">
+    <span class="proj-end-label">Get in touch</span>
+    <nav class="proj-end-nav">
+      <div class="proj-end-nav-col">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="proj-end-nav-col">
+        <a href="https://www.linkedin.com/in/ella-xue-676157253/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </nav>
+  </div>
+  <div class="proj-end-body">
+    <h2 class="proj-end-heading">Let's start<br>creating together.</h2>
+    <a href="contact.html" class="proj-end-btn">Let's talk ↗</a>
+  </div>
+  <div class="proj-end-foot">
+    <span>© 2026 Ella Xue</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+<script>
+// Project filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards       = document.querySelectorAll('.project-card');
+const noResults   = document.getElementById('noResults');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    let visible = 0;
+
+    cards.forEach(card => {
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.hidden = !match;
+      if (match) visible++;
+    });
+
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paw Paths — Ella Xue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Show full images without cropping on this page */
+    .proj-photo-wrap img { height: auto; object-fit: unset; }
+  </style>
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-follower" aria-hidden="true"></div>
+
+<!-- ============================================================ HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M8 38 C10 20, 24 8, 38 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M14 28 C18 24, 28 22, 34 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="38" cy="12" r="3" stroke="var(--coral)" stroke-width="1.5" fill="none"/>
+      </svg>
+      ella xue
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html"     class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="about.html"    class="nav-link">About Me</a>
+      <a href="contact.html"  class="nav-link nav-link--cta">Contact ↗</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="header-rule"></div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav>
+    <a href="index.html"     class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"    class="mobile-nav-link">About Me</a>
+    <a href="contact.html"  class="mobile-nav-link">Contact</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============================================================ COVER -->
+  <div class="proj-cover">
+    <img class="proj-cover-img" src="assets/images/pawpaths/cover%20paw.png" alt="Paw Paths project cover" aria-hidden="true">
+    <h1 class="proj-cover-title">Paw<br>Paths</h1>
+  </div>
+
+  <!-- ============================================================ HERO META -->
+  <div class="proj-hero-below">
+
+    <div class="proj-breadcrumb reveal">
+      <a href="projects.html" class="back-link">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 3L5 8l5 5"/>
+        </svg>
+        All Projects
+      </a>
+    </div>
+
+    <p class="proj-hero-sub reveal">
+      A gentle puzzle adventure about memory, curiosity, and companionship. Personal project, 2024.
+    </p>
+
+    <div class="snapshot-row reveal reveal-d2">
+      <div class="snap-cell">
+        <span class="snap-key">Status</span>
+        <span class="snap-val">Completed Prototype</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">My Role</span>
+        <span class="snap-val">Game Designer and Visual Designer</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Project Type</span>
+        <span class="snap-val">Personal 2D Game Design Project</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Project Time</span>
+        <span class="snap-val">September to November 2024</span>
+      </div>
+      <div class="snap-cell">
+        <span class="snap-key">Focus</span>
+        <span class="snap-val">Narrative Design and Player Experience</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============================================================ GAMEPLAY TESTING VIDEO -->
+  <div style="max-width: var(--max-w); margin: 0 auto; padding: 4rem max(5vw, 2.5rem) 1rem;">
+    <span class="eyebrow reveal">Gameplay Testing</span>
+    <h2 class="section-heading reveal reveal-d1">Paw Paths Prototype in Play</h2>
+  </div>
+  <div class="proj-trailer-wrap reveal">
+    <div class="proj-trailer">
+      <iframe
+        src="https://www.youtube.com/embed/l5Rj9tSxBl0?start=119&autoplay=1&mute=1"
+        title="Paw Paths — Gameplay Testing"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <div class="proj-wrap">
+
+    <!-- ============================================================ 1. PROJECT OVERVIEW -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Overview</span>
+      <h2 class="section-heading reveal reveal-d1">Project Overview</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">Paw Paths is a gentle 2D puzzle adventure about a puppy collecting fragments of everyday memories.</p>
+        <p style="margin-bottom: 1.2rem;">Players explore familiar spaces from a dog's point of view, including home, the neighborhood street, and a dog park. Through simple interactions, light puzzles, and object collection, the player gradually uncovers moments of joy, curiosity, and companionship.</p>
+        <p>Inspired by my own dog and the shared experiences within a community of dog owners, I wanted to create a warm, low-pressure experience that celebrates small moments.</p>
+      </div>
+      <div class="sprint-pills reveal reveal-d3">
+        <div class="sprint-pill">2D puzzle adventure</div>
+        <div class="sprint-pill">Three explorable environments</div>
+        <div class="sprint-pill">Memory fragment collection</div>
+        <div class="sprint-pill">Light object based puzzles</div>
+        <div class="sprint-pill">Environmental interaction</div>
+        <div class="sprint-pill">Narrative through everyday moments</div>
+        <div class="sprint-pill">Custom character animation</div>
+        <div class="sprint-pill">Memory album interface</div>
+      </div>
+    </section>
+
+    <!-- ============================================================ 2. CHARACTER DESIGN -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Character Design</span>
+      <h2 class="section-heading reveal reveal-d1">Designing the Puppy</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The main character was inspired by my black Shiba Inu.</p>
+        <p>The visual style uses soft shapes, childlike illustration, and a warm color palette. Even simple actions — walking, sniffing, searching, playing — needed to communicate personality, as the puppy is the emotional center of the experience.</p>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/dog.avif" alt="Black Shiba Inu character design">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/dog%20walking.gif" alt="Puppy walking animation">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Character Design · Walking Animation</p>
+    </div>
+
+    <!-- ============================================================ 3. THREE GAME ENVIRONMENTS -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Game Environments</span>
+      <h2 class="section-heading reveal reveal-d1">Three Everyday Worlds</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p>Each environment gives the puppy a different space to explore, a different set of interactions, and different memory fragments to discover.</p>
+      </div>
+
+      <!-- Scene 01: Home -->
+      <div class="proj-text-img" style="margin-top: 3.5rem;">
+        <div>
+          <span class="eyebrow reveal" style="margin-bottom: 0.5rem; display: block;">Scene 01</span>
+          <h3 class="section-heading reveal reveal-d1" style="font-size: clamp(1.3rem, 2.5vw, 1.8rem); margin-bottom: 1.5rem;">Home</h3>
+          <div class="role-intro reveal reveal-d2" style="max-width: 100%; margin-bottom: 0;">
+            <p>Home is the starting point. Players search for the puppy's frog toy, explore the living room, interact with furniture, and discover memory fragments connected to family life.</p>
+          </div>
+        </div>
+        <div>
+          <div class="proj-photo-wrap reveal" style="max-width: none;">
+            <img src="assets/images/pawpaths/scene1.avif" alt="Home environment">
+          </div>
+          <p class="proj-photo-caption" style="margin-top: 0.5rem;">Home Environment</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/scene1-1.gif" alt="Home prop interaction">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/scene1-2.avif" alt="Home scene detail">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Interactive Prop and Scene Detail</p>
+    </div>
+
+    <!-- Scene 02: Street -->
+    <section class="proj-section" style="padding-bottom: 1.5rem;">
+      <div class="proj-text-img">
+        <div>
+          <span class="eyebrow reveal" style="margin-bottom: 0.5rem; display: block;">Scene 02</span>
+          <h3 class="section-heading reveal reveal-d1" style="font-size: clamp(1.3rem, 2.5vw, 1.8rem); margin-bottom: 1.5rem;">Street</h3>
+          <div class="role-intro reveal reveal-d2">
+            <p>The street expands the puppy's world. Players explore the neighborhood, chase birds, collect objects, cross the road carefully, and discover memory fragments in everyday street details.</p>
+          </div>
+        </div>
+        <div>
+          <div class="proj-photo-wrap reveal" style="max-width: none;">
+            <img src="assets/images/pawpaths/scene2.avif" alt="Street environment">
+          </div>
+          <p class="proj-photo-caption" style="margin-top: 0.5rem;">Street Environment</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/scene2-1.gif" alt="Street interaction animation">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/scene2-2.gif" alt="Animated street prop">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Street Interaction and Animated Props</p>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/scene2-3.gif" alt="Crossing mechanic animation">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/scene2-4.avif" alt="Street collectible details">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Crossing Mechanic and Collectible Details</p>
+    </div>
+
+    <!-- Scene 03: Dog Park -->
+    <section class="proj-section" style="padding-bottom: 1.5rem;">
+      <div class="proj-text-img">
+        <div>
+          <span class="eyebrow reveal" style="margin-bottom: 0.5rem; display: block;">Scene 03</span>
+          <h3 class="section-heading reveal reveal-d1" style="font-size: clamp(1.3rem, 2.5vw, 1.8rem); margin-bottom: 1.5rem;">Dog Park</h3>
+          <div class="role-intro reveal reveal-d2">
+            <p>The dog park is the most open and social environment in the prototype. Players can meet other dogs, help find missing toys, collect objects, explore playful interactions, and discover memory fragments connected to companionship and outdoor play.</p>
+          </div>
+        </div>
+        <div>
+          <div class="proj-photo-wrap reveal" style="max-width: none;">
+            <img src="assets/images/pawpaths/scene3.avif" alt="Dog park environment">
+          </div>
+          <p class="proj-photo-caption" style="margin-top: 0.5rem;">Dog Park Environment</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/scene3-1.avif" alt="Dog park collectible props">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/scene3-2.gif" alt="Dog park character interaction">
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/pawpaths/scene3-3.gif" alt="Animated dog park play moment">
+      </div>
+      <p class="proj-photo-caption">Collectible Props and Character Interaction</p>
+    </div>
+
+    <!-- ============================================================ 4. INTERACTION MECHANICS -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Interaction Design</span>
+      <h2 class="section-heading reveal reveal-d1">Designing Gentle Interaction</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p>The interaction system was designed to support curiosity rather than difficulty. Players discover memories by exploring environments, interacting with objects, and completing simple collection based tasks.</p>
+      </div>
+
+      <div class="role-grid" style="margin-top: 2.5rem;">
+        <div class="role-card reveal reveal-d1">
+          <p class="role-name">Memory Fragment Collection</p>
+          <p class="role-desc">Interacting with objects or completing small tasks unlocks visual memory fragments. Each environment has its own collection progress, and players need to gather the key fragments before moving forward.</p>
+        </div>
+        <div class="role-card reveal reveal-d2">
+          <p class="role-name">Light Puzzle Tasks</p>
+          <p class="role-desc">Puzzles are simple and familiar, such as finding the puppy's favorite toys or helping another dog recover a missing object. The goal is to support narrative progression rather than create frustration.</p>
+        </div>
+        <div class="role-card reveal reveal-d3">
+          <p class="role-name">Environmental Interaction</p>
+          <p class="role-desc">Players can tap objects to change their state, move across the scene, or help the puppy reach a new area.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/pawpaths/scene%201%20interaation.avif" alt="Scene 1 interaction planning">
+      </div>
+      <p class="proj-photo-caption">Scene 1 Interaction Plan</p>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/pawpaths/scene%202%20interaction.avif" alt="Scene 2 interaction planning">
+      </div>
+      <p class="proj-photo-caption">Scene 2 Interaction Plan</p>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-wrap">
+        <img src="assets/images/pawpaths/scene%203%20interation.avif" alt="Scene 3 interaction planning">
+      </div>
+      <p class="proj-photo-caption">Scene 3 Interaction Plan</p>
+    </div>
+
+    <!-- ============================================================ 5. GAME UI -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">UI Design</span>
+      <h2 class="section-heading reveal reveal-d1">Supporting Memory and Progress</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">The UI supports exploration without overwhelming the player. It includes dialogue windows, puzzle prompts, scene progress tracking, and a memory album for collected fragments.</p>
+        <p>The memory album is the emotional record of the journey — collected fragments become part of a narrative rather than just rewards.</p>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/game%20ui.avif" alt="Game interface">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/memeory%20game%20ui.avif" alt="Memory album interface">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Game Interface and Memory Album</p>
+    </div>
+
+    <!-- ============================================================ 6. TESTING AND ITERATION -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Playtesting</span>
+      <h2 class="section-heading reveal reveal-d1">Testing the Player Experience</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p style="margin-bottom: 1.2rem;">Testing focused on whether players understood the interaction flow, scene objectives, and memory collection system. I observed movement patterns, object attention, confusion points, and whether the emotional tone stayed clear.</p>
+        <p>The gameplay testing video at the top shows the prototype in action across all three scenes.</p>
+      </div>
+
+      <ul class="trait-list reveal reveal-d3">
+        <li>Interaction clarity and object feedback timing</li>
+        <li>Scene navigation and collectible visibility</li>
+        <li>Puzzle readability and task understanding</li>
+        <li>Emotional pacing and relaxed tone</li>
+        <li>UI understanding and memory album usability</li>
+      </ul>
+    </section>
+
+    <!-- ============================================================ 7. BEHIND THE SCENES -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Process</span>
+      <h2 class="section-heading reveal reveal-d1">Behind the Scenes</h2>
+      <div class="role-intro reveal reveal-d2">
+        <p>The project combined digital drawing, scene composition, animation, interface design, interaction planning, and prototype testing. These process images show the development work behind the final scenes and interactions.</p>
+      </div>
+    </section>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--2">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/bhs1.avif" alt="Paw Paths visual development process">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/bhc2.avif" alt="Paw Paths visual development process">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Visual Development Process</p>
+    </div>
+
+    <div class="proj-photos reveal">
+      <div class="proj-photo-grid proj-photo-grid--3">
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/bhs3.avif" alt="Paw Paths visual development process">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/bhc4.avif" alt="Paw Paths visual development process">
+        </div>
+        <div class="proj-photo-wrap">
+          <img src="assets/images/pawpaths/bhc5.avif" alt="Paw Paths visual development process">
+        </div>
+      </div>
+      <p class="proj-photo-caption">Visual Development and Prototype Process</p>
+    </div>
+
+    <!-- ============================================================ 8. WHAT THIS PROJECT TAUGHT ME -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Game Design Reflection</span>
+      <h2 class="section-heading reveal reveal-d1">What This Project Taught Me</h2>
+      <div class="reflection-grid">
+        <div class="refl-card reveal reveal-d1">
+          <p class="refl-big-num">01</p>
+          <p class="refl-title">Small Interactions Can Carry Emotion</p>
+          <p class="refl-body">A simple action such as finding a toy or following a familiar path can become meaningful when it connects to memory, character, and player perspective.</p>
+        </div>
+        <div class="refl-card reveal reveal-d2">
+          <p class="refl-big-num">02</p>
+          <p class="refl-title">Environment Is Part of the Story</p>
+          <p class="refl-body">The home, street, and dog park were not only backgrounds. Each space needed its own rhythm, interactions, and emotional role within the puppy's journey.</p>
+        </div>
+        <div class="refl-card reveal reveal-d3">
+          <p class="refl-big-num">03</p>
+          <p class="refl-title">Gentle Games Still Need Clear Feedback</p>
+          <p class="refl-body">A relaxing game can avoid pressure without becoming unclear. Interaction feedback, collectible progress, scene goals, and UI still need to guide the player with confidence.</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /proj-wrap -->
+
+</main>
+
+<div class="proj-end">
+  <div class="proj-end-inner">
+    <span class="proj-end-label">Get in touch</span>
+    <nav class="proj-end-nav">
+      <div class="proj-end-nav-col">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="proj-end-nav-col">
+        <a href="https://www.linkedin.com/in/ella-xue-676157253/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </nav>
+  </div>
+  <div class="proj-end-body">
+    <h2 class="proj-end-heading">Let's start<br>creating together.</h2>
+    <a href="contact.html" class="proj-end-btn">Let's talk ↗</a>
+  </div>
+  <div class="proj-end-foot">
+    <span>© 2026 Ella Xue</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biochem 101 — Ella Xue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-follower" aria-hidden="true"></div>
+
+<!-- ============================================================ HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M8 38 C10 20, 24 8, 38 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M14 28 C18 24, 28 22, 34 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="38" cy="12" r="3" stroke="var(--coral)" stroke-width="1.5" fill="none"/>
+      </svg>
+      ella xue
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html"     class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="about.html"    class="nav-link">About Me</a>
+      <a href="contact.html"  class="nav-link nav-link--cta">Contact ↗</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="header-rule"></div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav>
+    <a href="index.html"     class="mobile-nav-link">Home</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="about.html"    class="mobile-nav-link">About Me</a>
+    <a href="contact.html"  class="mobile-nav-link">Contact</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============================================================ HERO -->
+  <div class="proj-hero">
+
+    <div class="proj-breadcrumb reveal">
+      <a href="projects.html" class="back-link">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 3L5 8l5 5"/>
+        </svg>
+        All Projects
+      </a>
+    </div>
+
+    <div class="hero-tags reveal">
+      <span class="tag tag-pm">Project Manager</span>
+      <span class="tag tag-type">PC Co-op Game</span>
+      <span class="tag tag-type">Isometric Beat-em-up</span>
+      <span class="tag tag-academic">Academic Project</span>
+    </div>
+
+    <h1 class="proj-hero-title reveal reveal-d1">
+      Biochem <em>101</em>
+    </h1>
+
+    <p class="proj-hero-sub reveal reveal-d2">
+      A cooperative PC action game blending fast-paced combat with a chemistry-based crafting system — built in 4 months by a 6-person student team.
+    </p>
+
+    <div class="hero-stats reveal reveal-d3">
+      <div class="stat-box">
+        <span class="stat-num">4</span>
+        <span class="stat-label">Month Build</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">6</span>
+        <span class="stat-label">Person Team</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Playtest Rounds</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">1</span>
+        <span class="stat-label">PM (me)</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="proj-wrap">
+
+    <!-- ============================================================ SNAPSHOT -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Project Snapshot</span>
+      <div class="snapshot-row reveal reveal-d1">
+        <div class="snap-cell">
+          <span class="snap-key">Role</span>
+          <span class="snap-val">Sole Project Manager</span>
+        </div>
+        <div class="snap-cell">
+          <span class="snap-key">Duration</span>
+          <span class="snap-val">4 Months</span>
+        </div>
+        <div class="snap-cell">
+          <span class="snap-key">Platform</span>
+          <span class="snap-val">PC</span>
+        </div>
+        <div class="snap-cell">
+          <span class="snap-key">Genre</span>
+          <span class="snap-val">Co-op Isometric Beat-em-up</span>
+        </div>
+        <div class="snap-cell">
+          <span class="snap-key">Methodology</span>
+          <span class="snap-val">Agile Weekly Sprints</span>
+        </div>
+        <div class="snap-cell">
+          <span class="snap-key">Tools</span>
+          <span class="snap-val">Unity · ClickUp · Figma · GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ CONTEXT -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Context</span>
+      <h2 class="section-heading reveal reveal-d1">The Production Environment</h2>
+      <div class="context-block reveal reveal-d2">
+        <div>
+          <span class="context-label">The Constraint</span>
+          <p class="context-text">
+            This project ran <strong>alongside multiple concurrent academic courses</strong> — every team member was balancing coursework, deadlines, and other commitments simultaneously. Workload visibility and realistic timeline estimation weren't just helpful; they were critical to keeping the team moving.
+          </p>
+        </div>
+        <div>
+          <span class="context-label">Core Design Goals</span>
+          <div class="context-pills">
+            <span class="context-pill highlight">Player interdependence</span>
+            <span class="context-pill highlight">Combo-based combat</span>
+            <span class="context-pill">Chemistry reaction systems</span>
+            <span class="context-pill">Risk-reward crafting</span>
+            <span class="context-pill">Shared co-op mechanics</span>
+            <span class="context-pill">Replayable encounters</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ ROLE -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Skills Demonstrated</span>
+      <h2 class="section-heading reveal reveal-d1">Role and Responsibilities</h2>
+      <p class="role-intro reveal reveal-d2">
+        As the sole Project Manager, I coordinated production across designers, developers, and artists — keeping the project realistic and the team aligned throughout a constrained semester timeline.
+      </p>
+      <div class="role-grid">
+        <div class="role-card reveal reveal-d1">
+          <span class="role-idx">01</span>
+          <p class="role-name">Sprint Planning and Task Management</p>
+          <p class="role-desc">Ran weekly sprint cycles with ClickUp tracking, stand-up meetings, and milestone checkpoints tailored to the academic calendar.</p>
+        </div>
+        <div class="role-card reveal reveal-d2">
+          <span class="role-idx">02</span>
+          <p class="role-name">Scope Management</p>
+          <p class="role-desc">Continuously reassessed scope as new ideas emerged. Prioritized core pillars over feature expansion to protect delivery quality.</p>
+        </div>
+        <div class="role-card reveal reveal-d3">
+          <span class="role-idx">03</span>
+          <p class="role-name">Cross-Disciplinary Mediation</p>
+          <p class="role-desc">Bridged communication between artists, designers, and developers — translating between technical constraints and creative goals.</p>
+        </div>
+        <div class="role-card reveal reveal-d1">
+          <span class="role-idx">04</span>
+          <p class="role-name">Playtest Coordination</p>
+          <p class="role-desc">Organized three rounds of playtesting. Synthesized findings into sprint priorities and tracked iteration outcomes across rounds.</p>
+        </div>
+        <div class="role-card reveal reveal-d2">
+          <span class="role-idx">05</span>
+          <p class="role-name">Workload Visibility</p>
+          <p class="role-desc">Monitored team bandwidth against academic load — re-estimated timelines regularly to prevent burnout and maintain momentum.</p>
+        </div>
+        <div class="role-card reveal reveal-d3">
+          <span class="role-idx">06</span>
+          <p class="role-name">Team Culture and Communication</p>
+          <p class="role-desc">Treated team cohesion as a production asset. Regular check-ins and open discussion reduced friction during high-pressure periods.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ TIMELINE -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Timeline</span>
+      <h2 class="section-heading reveal reveal-d1">Development Phases</h2>
+      <div class="sprint-pills reveal reveal-d2">
+        <div class="sprint-pill"><strong>4</strong> Months Total</div>
+        <div class="sprint-pill"><strong>Weekly</strong> Sprint Cycles</div>
+        <div class="sprint-pill"><strong>3</strong> Playtest Rounds</div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line"><div class="timeline-progress" id="tlProgress"></div></div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Phase 1</span>
+            <p class="tl-sprint-name">Discovery and Ideation</p>
+            <p class="tl-dates">Month 1</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">Team charter established</span>
+              <span class="chip">Concept exploration</span>
+              <span class="chip">Core pillars defined</span>
+              <span class="chip">ClickUp workflow set up</span>
+            </div>
+            <p class="tl-pm-note">Set sprint cadence and communication rhythm aligned with the semester academic schedule.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Phase 2</span>
+            <p class="tl-sprint-name">Core Mechanics Prototype</p>
+            <p class="tl-dates">Month 1–2</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">Combat system prototyped</span>
+              <span class="chip">Chemistry crafting built</span>
+              <span class="chip">Initial scope cut</span>
+            </div>
+            <p class="tl-pm-note">Guided first scope reassessment as feature ideas expanded beyond the realistic timeline.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Phase 3</span>
+            <p class="tl-sprint-name">Playtest Round 1</p>
+            <p class="tl-dates">Month 2</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">Early proof of concept tested</span>
+              <span class="chip">UI feedback gaps found</span>
+              <span class="chip">Iteration priorities set</span>
+            </div>
+            <p class="tl-pm-note">Synthesized findings and translated them into concrete sprint tasks within 48 hours.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Phase 4</span>
+            <p class="tl-sprint-name">Co-op Integration and Iteration</p>
+            <p class="tl-dates">Month 2–3</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip">Co-op systems integrated</span>
+              <span class="chip key">Cross-discipline mediation</span>
+              <span class="chip">Potion carry-over designed</span>
+            </div>
+            <p class="tl-pm-note">Bridged recurring tension between designer ambitions and developer feasibility constraints.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Phase 5</span>
+            <p class="tl-sprint-name">Playtest Rounds 2 and 3</p>
+            <p class="tl-dates">Month 3</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip key">Co-op flow validated</span>
+              <span class="chip">Role differentiation improved</span>
+              <span class="chip">Combo readability refined</span>
+            </div>
+            <p class="tl-pm-note">Iterated on UI, co-op systems, and risk-reward clarity across two consecutive test rounds.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-sprint-label">Phase 6</span>
+            <p class="tl-sprint-name">Polish and Final Delivery</p>
+            <p class="tl-dates">Month 4</p>
+          </div>
+          <div class="tl-right">
+            <div class="tl-chips">
+              <span class="chip">Final scope protection</span>
+              <span class="chip">Polish pass across systems</span>
+              <span class="chip key">Playable prototype delivered</span>
+            </div>
+            <p class="tl-pm-note">Kept the team focused on the core loop rather than adding features in the final stretch.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ CHALLENGES -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Key Challenges</span>
+      <h2 class="section-heading reveal reveal-d1">Problem → Response → Outcome</h2>
+      <div class="ch-table reveal reveal-d2">
+        <div class="ch-head">
+          <div class="ch-head-cell">Challenge</div>
+          <div class="ch-head-cell">My Response</div>
+          <div class="ch-head-cell">Outcome</div>
+        </div>
+        <div class="ch-row">
+          <div class="ch-cell">
+            <span class="ch-num">01 — Scope</span>
+            <p class="ch-problem">New ideas kept expanding the workload beyond what 4 months of academic development could support</p>
+          </div>
+          <div class="ch-cell">
+            <p class="ch-body">Ran frequent scope reassessment sessions focused on core pillars. Broke large tasks into sprint-sized goals and re-estimated timelines regularly throughout production.</p>
+          </div>
+          <div class="ch-cell">
+            <p class="ch-outcome">Team maintained momentum and delivered a polished cooperative gameplay loop rather than an unfinished feature set.</p>
+          </div>
+        </div>
+        <div class="ch-row">
+          <div class="ch-cell">
+            <span class="ch-num">02 — Disciplines</span>
+            <p class="ch-problem">Designers, artists, and developers approached features from conflicting perspectives — stalling decisions and creating unclear implementation expectations</p>
+          </div>
+          <div class="ch-cell">
+            <p class="ch-body">Acted as mediator between disciplines. Translated technical constraints into design considerations and ensured all perspectives were heard before decisions were finalized.</p>
+          </div>
+          <div class="ch-cell">
+            <p class="ch-outcome">Reduced bottlenecks and improved collaboration throughout development — decisions moved faster with shared context.</p>
+          </div>
+        </div>
+        <div class="ch-row">
+          <div class="ch-cell">
+            <span class="ch-num">03 — Co-op Readability</span>
+            <p class="ch-problem">Early playtesters treated combat and chemistry systems as separate mechanics rather than cooperative interdependent tools</p>
+          </div>
+          <div class="ch-cell">
+            <p class="ch-body">Iterated on gameplay structure and UI feedback based on playtest findings. Redesigned co-op interactions to encourage intentional coordination rather than parallel solo play.</p>
+          </div>
+          <div class="ch-cell">
+            <p class="ch-outcome">Later playtests showed stronger player collaboration and improved understanding of the cooperative identity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ PLAYTESTING -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Insights</span>
+      <h2 class="section-heading reveal reveal-d1">Playtesting Rounds</h2>
+      <div class="playtest-grid">
+        <div class="pt-card reveal reveal-d1">
+          <span class="pt-round">Round 1 — Early Proof of Concept</span>
+          <p class="pt-title">Concept Validation</p>
+          <div class="pt-findings">
+            <div class="pt-finding"><span class="pt-dot"></span><p class="pt-finding-text">Players enjoyed the combat concept and core loop</p></div>
+            <div class="pt-finding"><span class="pt-dot"></span><p class="pt-finding-text">UI feedback and onboarding were unclear</p></div>
+            <div class="pt-finding"><span class="pt-dot"></span><p class="pt-finding-text">Systems relied too heavily on verbal explanation</p></div>
+          </div>
+        </div>
+        <div class="pt-card round2 reveal reveal-d2">
+          <span class="pt-round">Round 2 — Co-op Integration</span>
+          <p class="pt-title">Shared Play Testing</p>
+          <div class="pt-findings">
+            <div class="pt-finding"><span class="pt-dot"></span><p class="pt-finding-text">Players often played independently, not cooperatively</p></div>
+            <div class="pt-finding"><span class="pt-dot"></span><p class="pt-finding-text">Some gameplay systems felt disconnected</p></div>
+            <div class="pt-finding"><span class="pt-dot"></span><p class="pt-finding-text">Co-op flow needed stronger interdependence signals</p></div>
+          </div>
+        </div>
+        <div class="pt-card round3 reveal reveal-d3">
+          <span class="pt-round">Round 3 — Refined Structure</span>
+          <p class="pt-title">Co-op Validated</p>
+          <div class="pt-findings">
+            <div class="pt-finding"><span class="pt-dot"></span><p class="pt-finding-text">Stronger collaboration between players observed</p></div>
+            <div class="pt-finding"><span class="pt-dot"></span><p class="pt-finding-text">Combo execution and readability improved</p></div>
+            <div class="pt-finding"><span class="pt-dot"></span><p class="pt-finding-text">Cooperative mechanics understood without prompting</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ REFLECTION -->
+    <section class="proj-section">
+      <span class="eyebrow reveal">Leadership Reflection</span>
+      <h2 class="section-heading reveal reveal-d1">What I'd Take Forward</h2>
+      <div class="reflection-grid">
+        <div class="refl-card reveal reveal-d1">
+          <p class="refl-big-num">01</p>
+          <p class="refl-title">Earlier Scope Guardrails</p>
+          <p class="refl-body">Scope kept creeping in early sprints. Setting explicit feature freeze checkpoints at the start would reduce the need for mid-project cuts under pressure.</p>
+        </div>
+        <div class="refl-card reveal reveal-d2">
+          <p class="refl-big-num">02</p>
+          <p class="refl-title">Discipline Alignment Sessions</p>
+          <p class="refl-body">Cross-discipline friction was recurring. A structured kickoff alignment session — shared vocabulary, shared constraints — would reduce mediation overhead throughout the project.</p>
+        </div>
+        <div class="refl-card reveal reveal-d3">
+          <p class="refl-big-num">03</p>
+          <p class="refl-title">Testing Earlier in the Cycle</p>
+          <p class="refl-body">Round 1 revealed issues that could have been caught sooner with lightweight paper prototyping. Earlier low-fidelity testing would accelerate the iteration loop.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ OUTCOME -->
+    <section class="proj-section" style="border-bottom:none; padding-bottom:0;">
+      <div class="outcome-banner reveal">
+        <div>
+          <span class="ob-eyebrow">Final Outcome</span>
+          <p class="ob-title">A playable co-op prototype built under real academic constraints — on time, with a team.</p>
+        </div>
+        <div class="ob-right">
+          <div class="ob-stat">
+            <p class="ob-num">4</p>
+            <p class="ob-label">Months End-to-End</p>
+          </div>
+          <div class="ob-stat">
+            <p class="ob-num">3</p>
+            <p class="ob-label">Playtest Rounds</p>
+          </div>
+          <div class="ob-stat">
+            <p class="ob-num">6</p>
+            <p class="ob-label">Team Members</p>
+          </div>
+          <div class="ob-stat">
+            <p class="ob-num">✓</p>
+            <p class="ob-label">Prototype Delivered</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /proj-wrap -->
+
+</main>
+
+<div class="proj-end">
+  <div class="proj-end-inner">
+    <span class="proj-end-label">Get in touch</span>
+    <nav class="proj-end-nav">
+      <div class="proj-end-nav-col">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="proj-end-nav-col">
+        <a href="https://www.linkedin.com/in/ella-xue-676157253/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </nav>
+  </div>
+  <div class="proj-end-body">
+    <h2 class="proj-end-heading">Let's start<br>creating together.</h2>
+    <a href="contact.html" class="proj-end-btn">Let's talk ↗</a>
+  </div>
+  <div class="proj-end-foot">
+    <span>© 2026 Ella Xue</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
