@@ -1,0 +1,23 @@
+{
+  "check_interval_seconds": 120,
+  "matches": [
+    {
+      "label": "FIFA Club World Cup 2025 — Final",
+      "tournament": "FIFA Club World Cup 2025",
+      "keywords": ["final", "club world cup"],
+      "url": "https://tickets.fifa.com/en/tournament-tickets/club-world-cup-2025"
+    },
+    {
+      "label": "FIFA Club World Cup 2025 — Semi Final",
+      "tournament": "FIFA Club World Cup 2025",
+      "keywords": ["semi-final", "semifinal", "semi final"],
+      "url": "https://tickets.fifa.com/en/tournament-tickets/club-world-cup-2025"
+    },
+    {
+      "label": "FIFA Club World Cup 2025 — Any match",
+      "tournament": "FIFA Club World Cup 2025",
+      "keywords": [],
+      "url": "https://tickets.fifa.com/en/tournament-tickets/club-world-cup-2025"
+    }
+  ]
+}

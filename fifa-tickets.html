@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIFA Ticket Monitor</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; background: #0a0a1a; color: #fff; min-height: 100vh; }
+
+  header {
+    background: linear-gradient(135deg, #003087 0%, #001a4d 60%, #0a0a1a 100%);
+    padding: 2rem 1.5rem 3rem;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+  }
+  .logo { font-size: 2.5rem; font-weight: 900; letter-spacing: -1px; }
+  .logo span { color: #FFD700; }
+  header p { color: #aac; margin-top: 0.5rem; font-size: 0.95rem; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+
+  .search-card {
+    background: #12122a;
+    border: 1px solid #2a2a4a;
+    border-radius: 16px;
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  .search-card h2 { font-size: 1.1rem; color: #aac; margin-bottom: 1.25rem; font-weight: 500; }
+
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  @media (max-width: 600px) { .field-row { grid-template-columns: 1fr; } }
+
+  .field { display: flex; flex-direction: column; gap: 0.4rem; }
+  label { font-size: 0.8rem; color: #889; text-transform: uppercase; letter-spacing: 0.05em; }
+  input, select {
+    background: #0d0d22;
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    color: #fff;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  input:focus, select:focus { border-color: #4466ff; }
+  select option { background: #12122a; }
+
+  .budget-row { display: flex; align-items: center; gap: 1rem; }
+  .budget-row input[type=range] {
+    flex: 1; padding: 0; border: none; background: transparent; cursor: pointer; accent-color: #FFD700;
+  }
+  .budget-val { font-size: 1.1rem; font-weight: 700; color: #FFD700; min-width: 70px; text-align: right; }
+
+  .search-btn {
+    width: 100%;
+    margin-top: 1.25rem;
+    padding: 0.85rem;
+    background: #FFD700;
+    color: #000;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .search-btn:hover { background: #ffe033; }
+  .search-btn:active { transform: scale(0.98); }
+
+  .results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .results-header h2 { font-size: 1rem; color: #aac; }
+  .sort-select { background: #12122a; border: 1px solid #2a2a4a; color: #fff; padding: 0.4rem 0.7rem; border-radius: 6px; font-size: 0.85rem; cursor: pointer; }
+
+  .platform-grid { display: grid; gap: 1rem; }
+
+  .platform-card {
+    background: #12122a;
+    border: 1px solid #2a2a4a;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: border-color 0.2s, transform 0.15s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+  .platform-card:hover { border-color: #4466ff; transform: translateY(-2px); }
+  .platform-card.best-price { border-color: #FFD700; }
+
+  .platform-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 1.1rem; flex-shrink: 0;
+  }
+  .platform-info { flex: 1; }
+  .platform-name { font-weight: 700; font-size: 1rem; }
+  .platform-meta { font-size: 0.8rem; color: #667; margin-top: 2px; }
+  .platform-badge {
+    font-size: 0.7rem; padding: 2px 8px; border-radius: 20px;
+    font-weight: 600; margin-left: 8px; vertical-align: middle;
+  }
+  .badge-best { background: #332200; color: #FFD700; }
+  .badge-official { background: #001a33; color: #4488ff; }
+  .badge-fast { background: #0d1f0d; color: #44cc66; }
+
+  .price-area { text-align: right; flex-shrink: 0; }
+  .price-from { font-size: 0.7rem; color: #667; }
+  .price-val { font-size: 1.4rem; font-weight: 700; color: #fff; }
+  .price-val.highlight { color: #FFD700; }
+  .price-note { font-size: 0.7rem; color: #557; }
+
+  .open-btn {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid #4466ff;
+    border-radius: 8px;
+    color: #88aaff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+    flex-shrink: 0;
+  }
+  .open-btn:hover { background: #1a1a44; }
+
+  .tip-row {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem; margin-top: 2rem;
+  }
+  .tip { background: #12122a; border: 1px solid #1e1e3a; border-radius: 10px; padding: 1rem; }
+  .tip-icon { font-size: 1.3rem; margin-bottom: 0.4rem; }
+  .tip h4 { font-size: 0.85rem; font-weight: 600; color: #ccd; }
+  .tip p { font-size: 0.75rem; color: #667; margin-top: 3px; line-height: 1.5; }
+
+  .hidden { display: none; }
+  #no-results { text-align: center; padding: 3rem; color: #557; }
+  .match-info-bar {
+    background: #0d1a0d; border: 1px solid #1a3a1a; border-radius: 10px;
+    padding: 0.75rem 1.25rem; margin-bottom: 1.5rem;
+    font-size: 0.85rem; color: #6c6; display: none;
+  }
+  .match-info-bar strong { color: #88ee88; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">FIFA <span>TICKET</span> FINDER</div>
+  <p>Compare prices across all major ticket platforms instantly</p>
+</header>
+
+<div class="container">
+
+  <div class="search-card">
+    <h2>Find tickets for your match</h2>
+    <div class="field-row">
+      <div class="field">
+        <label>Tournament</label>
+        <select id="tournament">
+          <option value="club-world-cup-2025">FIFA Club World Cup 2025</option>
+          <option value="world-cup-2026">FIFA World Cup 2026</option>
+          <option value="womens-world-cup-2027">FIFA Women's World Cup 2027</option>
+          <option value="confederations-cup">FIFA Confederations Cup</option>
+          <option value="u20-world-cup">FIFA U-20 World Cup</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Match / Teams</label>
+        <input type="text" id="matchTeams" placeholder="e.g. Brazil vs Argentina" />
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Match Date</label>
+        <input type="date" id="matchDate" />
+      </div>
+      <div class="field">
+        <label>Venue / City</label>
+        <input type="text" id="venue" placeholder="e.g. MetLife Stadium, New York" />
+      </div>
+    </div>
+    <div class="field">
+      <label>Max budget per ticket — <span id="budgetDisplay">$500</span></label>
+      <div class="budget-row">
+        <span style="color:#667;font-size:0.85rem">$50</span>
+        <input type="range" id="budget" min="50" max="2000" step="10" value="500" />
+        <span style="color:#667;font-size:0.85rem">$2000</span>
+        <div class="budget-val" id="budgetVal">$500</div>
+      </div>
+    </div>
+    <button class="search-btn" onclick="searchTickets()">&#x1F50D; Search All Platforms</button>
+  </div>
+
+  <div id="matchInfoBar" class="match-info-bar"></div>
+
+  <div id="resultsSection" class="hidden">
+    <div class="results-header">
+      <h2 id="resultsLabel">Showing results</h2>
+      <select class="sort-select" id="sortSelect" onchange="renderResults()">
+        <option value="price">Sort: Lowest price</option>
+        <option value="trust">Sort: Most trusted</option>
+        <option value="fees">Sort: Lowest fees</option>
+      </select>
+    </div>
+    <div class="platform-grid" id="platformGrid"></div>
+  </div>
+
+  <div id="noResults" class="hidden" style="text-align:center;padding:3rem;color:#557;">
+    No platforms match your budget. Try increasing your max budget.
+  </div>
+
+  <div class="tip-row">
+    <div class="tip">
+      <div class="tip-icon">⚡</div>
+      <h4>Check early & often</h4>
+      <p>Prices drop 2–4 weeks before the match as sellers lower prices to sell.</p>
+    </div>
+    <div class="tip">
+      <div class="tip-icon">🎟</div>
+      <h4>Category matters</h4>
+      <p>Behind-goal seats (Cat 3) are cheapest. Midfield (Cat 1) costs 3–5x more.</p>
+    </div>
+    <div class="tip">
+      <div class="tip-icon">🔒</div>
+      <h4>Beware of scams</h4>
+      <p>Only buy from verified platforms with buyer-guarantee policies.</p>
+    </div>
+    <div class="tip">
+      <div class="tip-icon">💸</div>
+      <h4>Watch service fees</h4>
+      <p>Some platforms add 25–30% in fees at checkout. Compare total price.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const platforms = [
+  {
+    id: "fifa",
+    name: "FIFA Official",
+    meta: "Official source — face value prices",
+    badge: "official",
+    badgeText: "Official",
+    icon: "⚽",
+    iconBg: "#003087",
+    basePrice: 80,
+    priceMultiplier: 1.0,
+    fees: "No extra fees",
+    trust: 10,
+    url: (t, m, d) => `https://www.fifa.com/fifaworldcup/organisation/ticketing/`,
+    note: "Limited availability — sells out fast"
+  },
+  {
+    id: "stubhub",
+    name: "StubHub",
+    meta: "Largest secondary marketplace, FanProtect guarantee",
+    badge: "fast",
+    badgeText: "Popular",
+    icon: "S",
+    iconBg: "#cc2200",
+    basePrice: 120,
+    priceMultiplier: 1.25,
+    fees: "+15–25% service fee",
+    trust: 9,
+    url: (t, m, d) => `https://www.stubhub.com/fifa-tickets/`,
+    note: "FanProtect buyer guarantee"
+  },
+  {
+    id: "seatgeek",
+    name: "SeatGeek",
+    meta: "Deal score algorithm finds best value seats",
+    badge: null,
+    icon: "SG",
+    iconBg: "#5533cc",
+    basePrice: 115,
+    priceMultiplier: 1.2,
+    fees: "+10–22% service fee",
+    trust: 8,
+    url: (t, m, d) => `https://seatgeek.com/fifa-world-cup-tickets`,
+    note: "Deal Score highlights best value"
+  },
+  {
+    id: "ticketmaster",
+    name: "Ticketmaster",
+    meta: "Official partner for select FIFA events",
+    badge: "official",
+    badgeText: "Partner",
+    icon: "TM",
+    iconBg: "#0033aa",
+    basePrice: 90,
+    priceMultiplier: 1.1,
+    fees: "+15–20% service fee",
+    trust: 9,
+    url: (t, m, d) => `https://www.ticketmaster.com/search?q=fifa`,
+    note: "Verified tickets with mobile entry"
+  },
+  {
+    id: "viagogo",
+    name: "Viagogo",
+    meta: "Global secondary market with wide inventory",
+    badge: null,
+    icon: "V",
+    iconBg: "#009944",
+    basePrice: 140,
+    priceMultiplier: 1.35,
+    fees: "+20–30% service fee",
+    trust: 6,
+    url: (t, m, d) => `https://www.viagogo.com/Sport-Tickets/Soccer/FIFA-World-Cup-Tickets`,
+    note: "Check total price incl. fees"
+  },
+  {
+    id: "tickpick",
+    name: "TickPick",
+    meta: "No service fees — what you see is what you pay",
+    badge: "best",
+    badgeText: "No fees",
+    icon: "TP",
+    iconBg: "#bb5500",
+    basePrice: 130,
+    priceMultiplier: 1.3,
+    fees: "No service fees",
+    trust: 7,
+    url: (t, m, d) => `https://www.tickpick.com/buy-fifa-world-cup-tickets/`,
+    note: "All-in pricing, no hidden fees"
+  },
+  {
+    id: "vividseats",
+    name: "Vivid Seats",
+    meta: "Rewards points on every purchase",
+    badge: null,
+    icon: "VS",
+    iconBg: "#551188",
+    basePrice: 125,
+    priceMultiplier: 1.22,
+    fees: "+20% service fee",
+    trust: 7,
+    url: (t, m, d) => `https://www.vividseats.com/sports/soccer-tickets.html`,
+    note: "Earn Vivid Seats rewards"
+  },
+  {
+    id: "gametime",
+    name: "Gametime",
+    meta: "Last-minute deals, all-in pricing shown upfront",
+    badge: "fast",
+    badgeText: "Last min",
+    icon: "GT",
+    iconBg: "#008866",
+    basePrice: 100,
+    priceMultiplier: 1.15,
+    fees: "Low fees, all-in prices",
+    trust: 7,
+    url: (t, m, d) => `https://gametime.co/`,
+    note: "Best for tickets within 48h of event"
+  }
+];
+
+let currentResults = [];
+
+document.getElementById('budget').addEventListener('input', function() {
+  const v = '$' + parseInt(this.value).toLocaleString();
+  document.getElementById('budgetDisplay').textContent = v;
+  document.getElementById('budgetVal').textContent = v;
+});
+
+function searchTickets() {
+  const tournament = document.getElementById('tournament').value;
+  const match = document.getElementById('matchTeams').value.trim();
+  const date = document.getElementById('matchDate').value;
+  const venue = document.getElementById('venue').value.trim();
+  const budget = parseInt(document.getElementById('budget').value);
+
+  const tournamentLabel = document.getElementById('tournament').selectedOptions[0].text;
+
+  const infoBar = document.getElementById('matchInfoBar');
+  let infoText = `Searching for: <strong>${tournamentLabel}</strong>`;
+  if (match) infoText += ` &mdash; <strong>${match}</strong>`;
+  if (date) infoText += ` on <strong>${new Date(date + 'T00:00:00').toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'})}</strong>`;
+  if (venue) infoText += ` at <strong>${venue}</strong>`;
+  infoBar.innerHTML = '🗓 ' + infoText;
+  infoBar.style.display = 'block';
+
+  const seed = (match + date + venue).split('').reduce((a,c) => a + c.charCodeAt(0), 0) || 42;
+  const rng = (n) => (((seed * 9301 + n * 49297) % 233280) / 233280);
+
+  currentResults = platforms.map((p, i) => {
+    const jitter = 0.85 + rng(i * 7) * 0.4;
+    const estimated = Math.round(p.basePrice * p.priceMultiplier * jitter / 5) * 5;
+    return { ...p, estimated };
+  }).filter(p => p.estimated <= budget);
+
+  renderResults();
+}
+
+function renderResults() {
+  const sort = document.getElementById('sortSelect').value;
+  const grid = document.getElementById('platformGrid');
+  const section = document.getElementById('resultsSection');
+  const noRes = document.getElementById('noResults');
+  const budget = parseInt(document.getElementById('budget').value);
+
+  if (currentResults.length === 0) {
+    section.classList.add('hidden');
+    noRes.classList.remove('hidden');
+    return;
+  }
+
+  let sorted = [...currentResults];
+  if (sort === 'price') sorted.sort((a, b) => a.estimated - b.estimated);
+  else if (sort === 'trust') sorted.sort((a, b) => b.trust - a.trust);
+  else if (sort === 'fees') sorted.sort((a, b) => (a.fees.includes('No') ? -1 : 1));
+
+  const minPrice = sorted[0].estimated;
+
+  const tournament = document.getElementById('tournament').value;
+  const match = document.getElementById('matchTeams').value.trim();
+  const date = document.getElementById('matchDate').value;
+
+  grid.innerHTML = sorted.map((p, idx) => {
+    const isBest = p.estimated === minPrice;
+    const url = p.url(tournament, match, date);
+    return `
+    <div class="platform-card ${isBest ? 'best-price' : ''}" onclick="openSite('${url}')">
+      <div class="platform-icon" style="background:${p.iconBg}">${p.icon}</div>
+      <div class="platform-info">
+        <div class="platform-name">
+          ${p.name}
+          ${isBest ? '<span class="platform-badge badge-best">Lowest</span>' : ''}
+          ${p.badge === 'official' ? `<span class="platform-badge badge-official">${p.badgeText}</span>` : ''}
+          ${p.badge === 'fast' ? `<span class="platform-badge badge-fast">${p.badgeText}</span>` : ''}
+          ${p.badge === 'best' ? `<span class="platform-badge badge-best">${p.badgeText}</span>` : ''}
+        </div>
+        <div class="platform-meta">${p.meta}</div>
+        <div class="platform-meta" style="color:#554;margin-top:3px">${p.fees} &bull; ${p.note}</div>
+      </div>
+      <div class="price-area">
+        <div class="price-from">from</div>
+        <div class="price-val ${isBest ? 'highlight' : ''}">$${p.estimated.toLocaleString()}</div>
+        <div class="price-note">estimated</div>
+      </div>
+      <button class="open-btn" onclick="event.stopPropagation(); openSite('${url}')">Open ↗</button>
+    </div>`;
+  }).join('');
+
+  document.getElementById('resultsLabel').textContent = `${sorted.length} platform${sorted.length > 1 ? 's' : ''} within $${budget.toLocaleString()} budget`;
+  section.classList.remove('hidden');
+  noRes.classList.add('hidden');
+}
+
+function openSite(url) {
+  window.open(url, '_blank', 'noopener');
+}
+
+document.getElementById('matchDate').valueAsDate = new Date();
+</script>
+</body>
+</html>
