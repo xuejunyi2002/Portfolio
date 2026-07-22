@@ -1839,8 +1839,8 @@ button { font-family: var(--font-body); }
 .next-proj-card {
   position: relative;
   display: block;
-  max-width: 760px;
-  height: clamp(220px, 32vw, 420px);
+  max-width: 480px;
+  height: clamp(160px, 20vw, 270px);
   margin: 0 auto;
   border-radius: 14px;
   overflow: hidden;
