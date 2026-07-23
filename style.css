@@ -1865,18 +1865,15 @@ button { font-family: var(--font-body); }
 .next-proj-card:hover .next-proj-overlay { background: rgba(0,0,0,0.32); }
 .next-proj-title {
   font-family: var(--font-body);
-  font-size: clamp(0.9rem, 1.6vw, 1.1rem);
-  font-weight: 400;
-  letter-spacing: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: #fff;
-  background: rgba(0,0,0,0.5);
-  padding: 0.4rem 0.6rem;
-  border-radius: 0;
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+  transition: opacity 0.3s var(--ease);
 }
-.next-proj-card:hover .next-proj-title { opacity: 1; transform: translateY(0); }
+.next-proj-card:hover .next-proj-title { opacity: 1; }
 @media (max-width: 640px) {
   .next-proj { padding: 3rem 1.5rem 3.5rem; }
   .next-proj-label { margin-bottom: 1.5rem; }
