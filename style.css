@@ -850,9 +850,8 @@ button { font-family: var(--font-body); }
   display: block; font-family: var(--font-body);
   font-size: clamp(1.1rem, 2.2vw, 1.55rem);
   font-weight: 500; letter-spacing: 0.01em; color: var(--ink);
-  margin-bottom: 2.5rem; position: relative; transition: color 0.3s, opacity 0.3s;
+  margin-bottom: 2.5rem; position: relative;
 }
-.contact-email-link:hover { color: var(--ink-muted); }
 .email-underline {
   position: absolute; bottom: -6px; left: 0; width: 100%; height: 8px; pointer-events: none;
 }
@@ -1236,10 +1235,8 @@ button { font-family: var(--font-body); }
 .role-card {
   background: var(--surface);
   padding: 1.8rem;
-  transition: background 0.2s;
   cursor: default;
 }
-.role-card:hover { background: var(--bg-2); }
 .role-idx {
   font-size: 0.65rem;
   font-weight: 600;
@@ -1356,10 +1353,8 @@ button { font-family: var(--font-body); }
   padding: 2rem 0 2rem 2.25rem;
   position: relative;
   border-bottom: 1px solid var(--border);
-  transition: background 0.2s;
 }
 .tl-item:last-child { border-bottom: none; }
-.tl-item:hover { background: rgba(0,0,0,0.012); border-radius: 8px; }
 .tl-dot {
   position: absolute;
   left: -5px;
@@ -1371,7 +1366,6 @@ button { font-family: var(--font-body); }
   border: 2px solid var(--border-2);
   transition: border-color 0.3s, background 0.3s;
 }
-.tl-item:hover .tl-dot,
 .tl-item.active .tl-dot {
   border-color: var(--ink);
   background: var(--ink);
@@ -1409,7 +1403,6 @@ button { font-family: var(--font-body); }
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 3px 10px;
-  transition: all 0.2s;
 }
 .chip.key {
   color: var(--ink);
@@ -1417,7 +1410,6 @@ button { font-family: var(--font-body); }
   border-color: var(--border-2);
   font-weight: 500;
 }
-.chip:hover { border-color: var(--border-2); background: var(--surface); }
 .tl-pm-note {
   font-size: 0.8rem;
   font-weight: 300;
@@ -1737,8 +1729,7 @@ button { font-family: var(--font-body); }
   overflow: hidden;
   background: var(--border);
 }
-.ch-panel { background: var(--surface); padding: 2.5rem 2.4rem; transition: background 0.2s; }
-.ch-panel:hover { background: var(--bg-2); }
+.ch-panel { background: var(--surface); padding: 2.5rem 2.4rem; }
 .ch-panel-label {
   font-size: 0.65rem;
   font-weight: 600;
@@ -1771,9 +1762,7 @@ button { font-family: var(--font-body); }
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 2rem 1.8rem;
-  transition: box-shadow 0.25s, transform 0.25s;
 }
-.refl-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.05); transform: translateY(-3px); }
 .refl-big-num {
   font-family: var(--font-serif);
   font-size: 3.5rem;
@@ -2146,7 +2135,6 @@ button { font-family: var(--font-body); }
 .ch-panel--challenge { border-top-color: #c87c78; }
 .ch-panel--response  { border-top-color: var(--blue); }
 .ch-panel--outcome   { border-top-color: var(--teal); background: var(--teal-light); }
-.ch-panel--outcome:hover { background: #d4e8e2; }
 .ch-panel--challenge .ch-panel-label { color: #c87c78; }
 .ch-panel--response  .ch-panel-label { color: var(--blue); }
 .ch-panel--outcome   .ch-panel-label { color: var(--teal); }
