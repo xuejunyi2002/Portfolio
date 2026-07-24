@@ -424,6 +424,24 @@ button { font-family: var(--font-body); }
   background: var(--ink-faint); flex-shrink: 0; margin-top: 0.45rem;
 }
 
+.trait-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem 1.5rem;
+}
+.trait-card { display: flex; align-items: center; gap: 0.85rem; }
+.trait-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; flex-shrink: 0; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--border); color: var(--ink);
+}
+.trait-icon svg { width: 16px; height: 16px; }
+.trait-card span:last-child {
+  font-size: 0.88rem; font-weight: 600; color: var(--ink); line-height: 1.3;
+}
+@media (max-width: 640px) {
+  .trait-grid { grid-template-columns: 1fr; gap: 1.1rem; }
+}
+
 /* ============================================================
    HOME — TOOLS & SKILLS
    ============================================================ */
