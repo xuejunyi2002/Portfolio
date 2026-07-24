@@ -168,6 +168,7 @@ button { font-family: var(--font-body); }
   font-weight: 700; color: var(--ink); line-height: 1.05;
   letter-spacing: -0.02em; margin-bottom: 2.5rem; font-style: normal;
 }
+.section-heading--tight { font-size: clamp(1.7rem, 2.8vw, 2.4rem); }
 .section-lead {
   font-size: 1rem; font-weight: 400; color: var(--ink-muted);
   max-width: 540px; line-height: 1.8; margin-bottom: 2.5rem;
