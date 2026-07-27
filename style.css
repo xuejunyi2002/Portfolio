@@ -327,14 +327,14 @@ button { font-family: var(--font-body); }
   left: 60vw; right: 0;
   top: calc(var(--nav-h) + clamp(2rem, 5vh, 5rem));
   margin: 0 auto;
-  width: min(28vw, calc(70vh * 0.75));
+  width: min(21vw, calc(52vh * 0.75));
   aspect-ratio: 3 / 4;
   overflow: hidden; opacity: 0;
   will-change: opacity, transform;
 }
 .hs-photo-wrap img {
   width: 100%;
-  height: calc(100% + 2.5rem); margin-top: -1.5rem;
+  height: calc(100% + 2.5rem); margin-top: -0.5rem;
   object-fit: cover; object-position: center top; display: block;
 }
 .hs-photo-tag {
@@ -364,7 +364,7 @@ button { font-family: var(--font-body); }
 /* Tablet / small laptop: slightly narrower photo, text breathing room */
 @media (max-width: 1024px) {
   .hs-big-name { font-size: clamp(5.5rem, 18vw, 18rem); }
-  .hs-photo-wrap { width: min(30vw, calc(66vh * 0.75)); }
+  .hs-photo-wrap { width: min(23vw, calc(50vh * 0.75)); }
   .hs-lower { max-width: 58vw; }
 }
 
