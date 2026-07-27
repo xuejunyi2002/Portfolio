@@ -334,7 +334,7 @@ button { font-family: var(--font-body); }
 }
 .hs-photo-wrap img {
   width: 100%;
-  height: calc(100% + 2.5rem); margin-top: -2.5rem;
+  height: calc(100% + 2.5rem); margin-top: -1.5rem;
   object-fit: cover; object-position: center top; display: block;
 }
 .hs-photo-tag {
