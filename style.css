@@ -1149,6 +1149,8 @@ button { font-family: var(--font-body); }
 }
 
 /* --- Project snapshot grid --- */
+.proj-hero-sub--tight { margin-bottom: 1.75rem; }
+.proj-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
 .snapshot-row {
   display: flex;
   flex-wrap: wrap;
