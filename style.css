@@ -208,6 +208,14 @@ button { font-family: var(--font-body); }
 .btn-outline:hover { border-color: var(--ink); color: var(--ink); transform: translateY(-1px); }
 .btn svg { width: 14px; height: 14px; }
 
+/* Inline text link (studio / external references inside copy) */
+.text-link {
+  color: var(--ink); text-decoration: underline;
+  text-decoration-thickness: 1px; text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+.text-link:hover { opacity: 0.6; }
+
 /* Underline link */
 .underline-link {
   display: inline-flex; align-items: center; gap: 0.35rem;
