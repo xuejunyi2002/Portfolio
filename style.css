@@ -1321,6 +1321,7 @@ button { font-family: var(--font-body); }
   margin-bottom: 3.5rem;
   flex-wrap: wrap;
 }
+.sprint-pills--creds { margin-top: -1rem; margin-bottom: 2.5rem; }
 .sprint-pill {
   font-size: 0.78rem;
   font-weight: 500;
